@@ -1,0 +1,970 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		0BA42CBCC9E14430A05FC84E /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C8F76A99A4734E8F9EF854E7 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				E4DF80A54B434A5982879463 /* CMake Rules */,
+			);
+			dependencies = (
+				A683CBCFD5A84A7DBC992D39 /* PBXTargetDependency */,
+				DE92076C1C29458E93795180 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		4E7AFEF9FB584BE888F54B96 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CE0EF3BD6135459C949929B1 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				7019607323DD4E05BB958770 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		55A95994FC0049A9B729F85E /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 349900BE11AB484B97967A91 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				41B9F74E38894811BE301C3B /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				7219638A7A1E4E5AB0622532 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		A269E836227C46C3970717DB /* RUN_TESTS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4595C65A44264500967E63D7 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildPhases = (
+				D9A9BC4A5F59430AA5024242 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+			);
+			name = RUN_TESTS;
+			productName = RUN_TESTS;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		4C7B95C6D5584634BB3A82CB /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/src/nestegg.c */ = {isa = PBXBuildFile; fileRef = 337C3D1E98AF4024AFCDCDFB /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/src/nestegg.c */; settings = {COMPILER_FLAGS = ""; }; };
+		AE03DBFD2BD94014A001FA92 /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include/nestegg/nestegg.h */ = {isa = PBXBuildFile; fileRef = EBC7C27001A14DBD8813EC66 /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include/nestegg/nestegg.h */; settings = {COMPILER_FLAGS = ""; }; };
+		C1476465596D4E749BB5A776 /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 3E3AB2E71F8F4428A80079E9 /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		03EAD80D07A744A9B64CBE4C /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		1B50FDB626914EF6914C43DD = {
+			isa = PBXBuildStyle;
+		};
+		59560E840ECC4EC0BC7379D7 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		F0D787F4288B494BAB0DC7DB /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		FAB66D4028FE45A5B996E018 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		4020A659BE3044A9988D6804 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 518D010BE99D463F96CDC4C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E7AFEF9FB584BE888F54B96;
+			remoteInfo = ZERO_CHECK;
+		};
+		50603D6377494DEDAC06AB2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 518D010BE99D463F96CDC4C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E7AFEF9FB584BE888F54B96;
+			remoteInfo = ZERO_CHECK;
+		};
+		781DBC4E8AF54E239C791D09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 518D010BE99D463F96CDC4C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A4D4EA7DE5C45E8B1D3F0EC;
+			remoteInfo = libnestegg;
+		};
+		F32DBA582F8F4019980A3929 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 518D010BE99D463F96CDC4C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BA42CBCC9E14430A05FC84E;
+			remoteInfo = ALL_BUILD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09A9BA5100454C6BB7FE7828 /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		2CF4A3C29CAF41DB964BDFEF /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		337C3D1E98AF4024AFCDCDFB /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/src/nestegg.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = nestegg.c; path = src/nestegg.c; sourceTree = SOURCE_ROOT; };
+		3E3AB2E71F8F4428A80079E9 /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		EBC7C27001A14DBD8813EC66 /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include/nestegg/nestegg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nestegg.h; path = include/nestegg/nestegg.h; sourceTree = SOURCE_ROOT; };
+		FD1D57520E814F3483815D5D /* libnestegg */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblibnestegg.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		3DA28FC772DE4D4395C4B0FD /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				337C3D1E98AF4024AFCDCDFB /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/src/nestegg.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		52C250C109E84527AA0402DE /* libnestegg */ = {
+			isa = PBXGroup;
+			children = (
+				F8074446FE8846BA81F7EB5C /* Header Files */,
+				3DA28FC772DE4D4395C4B0FD /* Source Files */,
+				3E3AB2E71F8F4428A80079E9 /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/CMakeLists.txt */,
+			);
+			name = libnestegg;
+			sourceTree = "<group>";
+		};
+		5F909869E9434428B816502C /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				F9897CDB18F840488F3D6BFF /* CMake Rules */,
+				2CF4A3C29CAF41DB964BDFEF /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		6369F6A5101C4D62AE3669E4 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				8952B90DE36442E2B65C0A1A /* CMake Rules */,
+				09A9BA5100454C6BB7FE7828 /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		8952B90DE36442E2B65C0A1A /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		89AC450866CA4E048F1046AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD1D57520E814F3483815D5D /* libnestegg */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9EB0E449A3F4E1A9C952BFE = {
+			isa = PBXGroup;
+			children = (
+				F32F8AC8A19A4E9989878F04 /* Sources */,
+				CCDBD21A9E664ED4946504E5 /* Resources */,
+				89AC450866CA4E048F1046AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCDBD21A9E664ED4946504E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F32F8AC8A19A4E9989878F04 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				52C250C109E84527AA0402DE /* libnestegg */,
+				5F909869E9434428B816502C /* ALL_BUILD */,
+				6369F6A5101C4D62AE3669E4 /* ZERO_CHECK */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		F8074446FE8846BA81F7EB5C /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBC7C27001A14DBD8813EC66 /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include/nestegg/nestegg.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		F9897CDB18F840488F3D6BFF /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A4D4EA7DE5C45E8B1D3F0EC /* libnestegg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC1344650F8D45E596EEF20A /* Build configuration list for PBXNativeTarget "libnestegg" */;
+			buildPhases = (
+				FE6E8D2C7B9B4F31943D8B18 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99FE9C5EFE884EEDBD3D0D8C /* PBXTargetDependency */,
+			);
+			name = libnestegg;
+			productName = libnestegg;
+			productReference = FD1D57520E814F3483815D5D /* libnestegg */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		518D010BE99D463F96CDC4C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0820;
+			};
+			buildConfigurationList = A2DAB2BC545B47EB8AEAEF3F /* Build configuration list for PBXProject "libnestegg" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				03EAD80D07A744A9B64CBE4C /* Debug */,
+				F0D787F4288B494BAB0DC7DB /* Release */,
+				FAB66D4028FE45A5B996E018 /* MinSizeRel */,
+				59560E840ECC4EC0BC7379D7 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = C9EB0E449A3F4E1A9C952BFE;
+			projectDirPath = ../../../../libs/libnestegg;
+			projectRoot = "";
+			targets = (
+				0BA42CBCC9E14430A05FC84E /* ALL_BUILD */,
+				A269E836227C46C3970717DB /* RUN_TESTS */,
+				4E7AFEF9FB584BE888F54B96 /* ZERO_CHECK */,
+				55A95994FC0049A9B729F85E /* install */,
+				5A4D4EA7DE5C45E8B1D3F0EC /* libnestegg */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11868F6B453E4FFA8751360F = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		25662C33EDB342D18F43E49D = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		38C4D0B3EF664FDD88E275BC = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		41B9F74E38894811BE301C3B /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg -f /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		7019607323DD4E05BB958770 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg -f /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		D9A9BC4A5F59430AA5024242 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg -f /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg/CMakeScripts/RUN_TESTS_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		E07481EF438841EBA012F1CF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		E4DF80A54B434A5982879463 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg -f /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE6E8D2C7B9B4F31943D8B18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C7B95C6D5584634BB3A82CB /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/src/nestegg.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7219638A7A1E4E5AB0622532 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BA42CBCC9E14430A05FC84E /* ALL_BUILD */;
+			targetProxy = F32DBA582F8F4019980A3929 /* PBXContainerItemProxy */;
+		};
+		99FE9C5EFE884EEDBD3D0D8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E7AFEF9FB584BE888F54B96 /* ZERO_CHECK */;
+			targetProxy = 50603D6377494DEDAC06AB2B /* PBXContainerItemProxy */;
+		};
+		A683CBCFD5A84A7DBC992D39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E7AFEF9FB584BE888F54B96 /* ZERO_CHECK */;
+			targetProxy = 4020A659BE3044A9988D6804 /* PBXContainerItemProxy */;
+		};
+		DE92076C1C29458E93795180 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A4D4EA7DE5C45E8B1D3F0EC /* libnestegg */;
+			targetProxy = 781DBC4E8AF54E239C791D09 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		22FCC7E5AF884239B67ECC8D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libnestegg;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		2344D184EC554D478006382E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg/build;
+			};
+			name = Release;
+		};
+		289B826F9BE74312984E3A5E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		30AF44B373A849ADA61ACC7B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		360AEFD44CF74C9897EEC29E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		4BA501654EE84F7CB4C8C731 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg/build;
+			};
+			name = MinSizeRel;
+		};
+		651B5E2DF33348BFACA7FDE5 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		6A3AC0F9E0B54F319E87B6EF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg/build;
+			};
+			name = RelWithDebInfo;
+		};
+		70EAC04D2F034A8C84AE8CBC /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		80036766AF6B4E169CC89EC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		8BC655D8D860436FBACC84F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		8C9C740FEF4B48A6BCEB9FA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		96939EF2DF1941599C80329B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		A5273E4AD2914B05B67A2AE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		A69CAC8079884B93BCC1D792 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg/build;
+			};
+			name = Debug;
+		};
+		AD303024323347789CB0D0F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		AEF6824B8001461EB1E5C827 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		BFCA26AE61F545D49DCD3D41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libnestegg;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		BFCC6C26FCB0436C9D3A3362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		C183A5058E2C43B585D9E0DE /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		EFDE7C220C474CA3B33C4CF4 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		F542A3036C07470B8E5EADC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libnestegg;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		FAB96A13D9D44C24B295B304 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics        -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libnestegg;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		FB4D3D3DDD014A4E994E203F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		349900BE11AB484B97967A91 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96939EF2DF1941599C80329B /* Debug */,
+				8BC655D8D860436FBACC84F4 /* Release */,
+				EFDE7C220C474CA3B33C4CF4 /* MinSizeRel */,
+				289B826F9BE74312984E3A5E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4595C65A44264500967E63D7 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD303024323347789CB0D0F8 /* Debug */,
+				A5273E4AD2914B05B67A2AE3 /* Release */,
+				AEF6824B8001461EB1E5C827 /* MinSizeRel */,
+				30AF44B373A849ADA61ACC7B /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A2DAB2BC545B47EB8AEAEF3F /* Build configuration list for PBXProject "libnestegg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A69CAC8079884B93BCC1D792 /* Debug */,
+				2344D184EC554D478006382E /* Release */,
+				4BA501654EE84F7CB4C8C731 /* MinSizeRel */,
+				6A3AC0F9E0B54F319E87B6EF /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C8F76A99A4734E8F9EF854E7 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFCC6C26FCB0436C9D3A3362 /* Debug */,
+				80036766AF6B4E169CC89EC4 /* Release */,
+				651B5E2DF33348BFACA7FDE5 /* MinSizeRel */,
+				70EAC04D2F034A8C84AE8CBC /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CC1344650F8D45E596EEF20A /* Build configuration list for PBXNativeTarget "libnestegg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFCA26AE61F545D49DCD3D41 /* Debug */,
+				F542A3036C07470B8E5EADC7 /* Release */,
+				22FCC7E5AF884239B67ECC8D /* MinSizeRel */,
+				FAB96A13D9D44C24B295B304 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CE0EF3BD6135459C949929B1 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB4D3D3DDD014A4E994E203F /* Debug */,
+				8C9C740FEF4B48A6BCEB9FA2 /* Release */,
+				C183A5058E2C43B585D9E0DE /* MinSizeRel */,
+				360AEFD44CF74C9897EEC29E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 518D010BE99D463F96CDC4C9 /* Project object */;
+}

@@ -1,0 +1,2080 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		0BA42CBCC9E14430A05FC84E /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3B78EDF731E94506B3000DD2 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				F5D3A75AB775493D9E79E3EA /* CMake Rules */,
+			);
+			dependencies = (
+				0D5E16C1C34743129ED3D1DF /* PBXTargetDependency */,
+				7EFFD8ECCFD8494B968B9F59 /* PBXTargetDependency */,
+				9A38613FD8694613830EB406 /* PBXTargetDependency */,
+				FDDC26E33FE84BC1A0C74C1D /* PBXTargetDependency */,
+				B53DFA0DE31145BC9CAACCB9 /* PBXTargetDependency */,
+				4684CB0678394C7680194C8E /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		4E7AFEF9FB584BE888F54B96 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 25FFC7F1B8E0440AA540BB28 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				DB790B7FDF53478B8DB51A3F /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		55A95994FC0049A9B729F85E /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2722528010DC47D39534DAAD /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				CD575AEFA43F4453BE7B4F2D /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				B409D301791D489EA7BE69CF /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		A269E836227C46C3970717DB /* RUN_TESTS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A15DED4BBEA14952B62745D2 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildPhases = (
+				60749ACA4BB74C6E9D26F469 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+			);
+			name = RUN_TESTS;
+			productName = RUN_TESTS;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		01D461B6989C4E42AA7E8533 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_mips.cc */ = {isa = PBXBuildFile; fileRef = 4772AC09FB134C6E984DA6F2 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_mips.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		01D7157298CE4AAE809252E9 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale.cc */ = {isa = PBXBuildFile; fileRef = 09A85D8FC199444EABCD430E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		042521427053446A81D50CDD /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_win.cc */ = {isa = PBXBuildFile; fileRef = 9432820E6D2A4A56A8C8438D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_win.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		09EE675A7FC24EF6B6E6DC97 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_common.cc */ = {isa = PBXBuildFile; fileRef = E6BF1A57BAB0407D9962372E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_common.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		0A9F685DC92F4318A4AC800B /* /Users/pavelershov/Job/WebM_Practice/src/Shaders.cpp */ = {isa = PBXBuildFile; fileRef = DC8983B995E64CBC9283B9D9 /* /Users/pavelershov/Job/WebM_Practice/src/Shaders.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		0C60DEC4E2194EB6B37D17B9 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_common.cc */ = {isa = PBXBuildFile; fileRef = 40681E22DFD94DBC9A22D1B7 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_common.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		0F3ABB2B6EEB4E49A970D455 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = B14128C8D2264A6185CE40A2 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_monitor.m */; settings = {COMPILER_FLAGS = ""; }; };
+		10C9F3D0CC044F37A2DB0B57 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/version.h */ = {isa = PBXBuildFile; fileRef = 8C9EEEB0BB5840FC915EF0EF /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/version.h */; settings = {COMPILER_FLAGS = ""; }; };
+		171E2E960521466AB131A854 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/video_common.h */ = {isa = PBXBuildFile; fileRef = DDDA903F9E31423BBB2EC9FD /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/video_common.h */; settings = {COMPILER_FLAGS = ""; }; };
+		17389B3B9DBE4599984BBD9E /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include/nestegg/nestegg.h */ = {isa = PBXBuildFile; fileRef = 08161DF6F1724D9088B01529 /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include/nestegg/nestegg.h */; settings = {COMPILER_FLAGS = ""; }; };
+		180E093A01864FE3BEA0F9A4 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_msa.cc */ = {isa = PBXBuildFile; fileRef = AC6B126399974FD1A32B0758 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_msa.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		18D7CA5CDFA84FCF8A5EE5D0 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_argb.cc */ = {isa = PBXBuildFile; fileRef = 5104736AA01F4AAFA0BD0AAE /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_argb.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		18DE51B6E15744DD9438A042 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/compare.h */ = {isa = PBXBuildFile; fileRef = 667AAB32FFB04B09B58469A6 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/compare.h */; settings = {COMPILER_FLAGS = ""; }; };
+		1928714583A7477D8CAA89B9 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_neon64.cc */ = {isa = PBXBuildFile; fileRef = 0AF8CCD02642452BB0A2BF27 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_neon64.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		196E994789A04F358D607C1C /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = A8C667EA2F224D80A17CFAB4 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/nsgl_context.h */; settings = {COMPILER_FLAGS = ""; }; };
+		1B7FB25BDE8F48A595C9FA43 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = DE5EE883BBC6455AB58A4153 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/include/GLFW/glfw3native.h */; settings = {COMPILER_FLAGS = ""; }; };
+		1F95AF440EEE4ADC979B4B3C /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/convert.h */ = {isa = PBXBuildFile; fileRef = 24ECDD3FAC43481A9761FEC1 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/convert.h */; settings = {COMPILER_FLAGS = ""; }; };
+		2014C67654B54DF5AF85FA49 /* /Users/pavelershov/Job/WebM_Practice/src/main.cpp */ = {isa = PBXBuildFile; fileRef = 9555B20084104A53AF45E6EB /* /Users/pavelershov/Job/WebM_Practice/src/main.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		2125E610B9CF41C28826B060 /* /Users/pavelershov/Job/WebM_Practice/src/DrawManager.h */ = {isa = PBXBuildFile; fileRef = 27D130548A4143EC83C7CE99 /* /Users/pavelershov/Job/WebM_Practice/src/DrawManager.h */; settings = {COMPILER_FLAGS = ""; }; };
+		2353F0A4A02E4700AF063E74 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/rotate_row.h */ = {isa = PBXBuildFile; fileRef = 1485A54B8BB1480D88003DC4 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/rotate_row.h */; settings = {COMPILER_FLAGS = ""; }; };
+		2658DE37DAE94E718B0AC11A /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = ED7515AC6AD84A2A84649F18 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/nsgl_context.m */; settings = {COMPILER_FLAGS = ""; }; };
+		28551DDA8FD24FA3AB583460 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/macros_msa.h */ = {isa = PBXBuildFile; fileRef = 1FE366C87DCD48688E2076C3 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/macros_msa.h */; settings = {COMPILER_FLAGS = ""; }; };
+		2A069AC2647E42399E8E9A51 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_from.cc */ = {isa = PBXBuildFile; fileRef = 6C3D8CAB8CF34604A46C9F0B /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_from.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		2BC9207298CE486D92BC8117 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_neon64.cc */ = {isa = PBXBuildFile; fileRef = 6FD549DE7DFE42B8967B3F20 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_neon64.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		2BEEB0CCBA784D959594319A /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_neon.cc */ = {isa = PBXBuildFile; fileRef = D63E13F231C84A57A488462F /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_neon.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		2ECABBD298334D39B00ED506 /* /Users/pavelershov/Job/WebM_Practice/libs/glew/src/glew.c */ = {isa = PBXBuildFile; fileRef = 3FD8D1FE92CF4C1EBF6B5D7E /* /Users/pavelershov/Job/WebM_Practice/libs/glew/src/glew.c */; settings = {COMPILER_FLAGS = ""; }; };
+		3419706F9DE1416DBE654AA9 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_win.cc */ = {isa = PBXBuildFile; fileRef = 3A963D35155942729ADFC17E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_win.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		34BC4F109BBD4017B536AAD7 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = 001EA152E2FC44A391A8000E /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_window.m */; settings = {COMPILER_FLAGS = ""; }; };
+		377009D18715445EA58903F8 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_msa.cc */ = {isa = PBXBuildFile; fileRef = C11C497C94FB42CCAC604B35 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_msa.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		382790C008F046F7AC655E28 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_msa.cc */ = {isa = PBXBuildFile; fileRef = 9CDC3E4509E849AABD3C33A4 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_msa.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		3B51B2F5DC0B4D199B508640 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = 76F60EFED48C4FF2BF93550A /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/monitor.c */; settings = {COMPILER_FLAGS = ""; }; };
+		3CC10AF5E1FD4DE1BC801675 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = 9BFEB2EB40B64DB699EF2C5C /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/init.c */; settings = {COMPILER_FLAGS = ""; }; };
+		3D77640154BC439BA6C56BF6 /* /Users/pavelershov/Job/WebM_Practice/src/Helpers.h */ = {isa = PBXBuildFile; fileRef = F59B6EE0AC314B40AC161230 /* /Users/pavelershov/Job/WebM_Practice/src/Helpers.h */; settings = {COMPILER_FLAGS = ""; }; };
+		3EE40B5FC20E4969A7AFA02E /* /Users/pavelershov/Job/WebM_Practice/libs/glew/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 682CC9BECDDE47FABCED7ADB /* /Users/pavelershov/Job/WebM_Practice/libs/glew/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		42278810F1ED4C98B62AB352 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_neon.cc */ = {isa = PBXBuildFile; fileRef = AC079EA057A449DFA05B1F8D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_neon.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		42D5CB0E8C3F425C8C63C64D /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = 3EB5659FA8A94F4FB0920E22 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/context.c */; settings = {COMPILER_FLAGS = ""; }; };
+		434B796D0CD74F6BA5559A05 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare.cc */ = {isa = PBXBuildFile; fileRef = EDB9F9A3E8484DF5AF167CF2 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		44CEEC3E84004FE0B1F9EAD3 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = 1A14B311F6A14620B9F68968 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/internal.h */; settings = {COMPILER_FLAGS = ""; }; };
+		47E290965E40405095B85B6E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/mjpeg_decoder.cc */ = {isa = PBXBuildFile; fileRef = 2A084C396042434099E411A9 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/mjpeg_decoder.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		4DA570063CFE4F22B57A5D2F /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/iokit_joystick.m */ = {isa = PBXBuildFile; fileRef = 1DF73F484F484301976B08D9 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/iokit_joystick.m */; settings = {COMPILER_FLAGS = ""; }; };
+		4F2E10F0F8C24728B4D37F3D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/mjpeg_validate.cc */ = {isa = PBXBuildFile; fileRef = 2E356B6A99BC4015BCC41359 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/mjpeg_validate.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		5152E76791FC43A7A18CD736 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_any.cc */ = {isa = PBXBuildFile; fileRef = 54092AE8D8B2480AA154B90E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_any.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		521CC42CAFA74A44AE59722F /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/convert_from.h */ = {isa = PBXBuildFile; fileRef = 7889EDAC6B294F3E90E80518 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/convert_from.h */; settings = {COMPILER_FLAGS = ""; }; };
+		54F056A98F2540C7807D1327 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/rotate_argb.h */ = {isa = PBXBuildFile; fileRef = 21603F7347874582A6D948D5 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/rotate_argb.h */; settings = {COMPILER_FLAGS = ""; }; };
+		554C9371673D4A82BBB4204B /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/mjpeg_decoder.h */ = {isa = PBXBuildFile; fileRef = 21CCA93EA2564FD993BA0B64 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/mjpeg_decoder.h */; settings = {COMPILER_FLAGS = ""; }; };
+		572C32C3601C4357B027AAFD /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_from_argb.cc */ = {isa = PBXBuildFile; fileRef = 7E5A978BB3BE42AF9BE68852 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_from_argb.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		5807428CB9C34C94805B0BE0 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/row.h */ = {isa = PBXBuildFile; fileRef = 179ED9D0F59040808261AD2B /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/row.h */; settings = {COMPILER_FLAGS = ""; }; };
+		5825DC96B8B64E5286B4155D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_to_argb.cc */ = {isa = PBXBuildFile; fileRef = B9E1ED21A5914266AE8836CE /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_to_argb.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		589FCE9C7DF548CAB04787F2 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/basic_types.h */ = {isa = PBXBuildFile; fileRef = F5A835371CC341C19BE220C3 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/basic_types.h */; settings = {COMPILER_FLAGS = ""; }; };
+		5956CF1AF3414E338BD0AC10 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_neon64.cc */ = {isa = PBXBuildFile; fileRef = 6868ADFA907543D4893D6980 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_neon64.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		5A1F5D988A1E4A19998AEF91 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_win.cc */ = {isa = PBXBuildFile; fileRef = 98A170E2448D42E58A51D61A /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_win.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		5B08116A5E5149E8A424E069 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/rotate.h */ = {isa = PBXBuildFile; fileRef = 52813D5671944BFE9A48FBF6 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/rotate.h */; settings = {COMPILER_FLAGS = ""; }; };
+		5CEC9C55AD9E4682B64FA200 /* /Users/pavelershov/Job/WebM_Practice/src/DrawManager.cpp */ = {isa = PBXBuildFile; fileRef = FCAF11944E7E4C4CB7295F36 /* /Users/pavelershov/Job/WebM_Practice/src/DrawManager.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		6057D0B6128E4D5AA58C656E /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = 794EFD4624AF4DE89AFCDFEC /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/window.c */; settings = {COMPILER_FLAGS = ""; }; };
+		6260A8F46C374096ACA19B9F /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_gcc.cc */ = {isa = PBXBuildFile; fileRef = BE8C5871EB3B4FD8B8F26B64 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_gcc.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		664048D6B09946508BCC3E1E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_neon.cc */ = {isa = PBXBuildFile; fileRef = 2B6839B393BA40E397B4FD98 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_neon.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		6649EF3D59514C0E917D5DA4 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_common.cc */ = {isa = PBXBuildFile; fileRef = 32317A201F7A4045AD679991 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_common.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		66E8D07E663A446DA2821D32 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_common.cc */ = {isa = PBXBuildFile; fileRef = 982D53A12FB24094B5D76A0E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_common.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		6D3A34A4FBA842039AF381CE /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_jpeg.cc */ = {isa = PBXBuildFile; fileRef = 2F62CD391E664AA3B6DC08C1 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_jpeg.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		72F282EB70FC4289A0D4EFA7 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_mips.cc */ = {isa = PBXBuildFile; fileRef = B2C31F525B494E408D878BB6 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_mips.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		7AC7E8F19EEB43E1B70785D7 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert.cc */ = {isa = PBXBuildFile; fileRef = 3194AB34BA6F432AA3BEB186 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		7DD3B67BC80C4F949EC5F100 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_any.cc */ = {isa = PBXBuildFile; fileRef = B53E68CD6D7E4FE6828F28AD /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_any.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		7E3A14CA6E354369A08077AD /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_mips.cc */ = {isa = PBXBuildFile; fileRef = E4D0C35988724DE39CBA855D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_mips.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		7F29B3F126A945C2B963CDBA /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/cpu_id.cc */ = {isa = PBXBuildFile; fileRef = E0E01396BFB747A0B7AF80DF /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/cpu_id.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		80530662E9B14C388CB0FF1E /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/src/nestegg.c */ = {isa = PBXBuildFile; fileRef = 7277677D24C141F1AE4DD58E /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/src/nestegg.c */; settings = {COMPILER_FLAGS = ""; }; };
+		8660D6E97C3C47B2808ACE99 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/mach_time.c */ = {isa = PBXBuildFile; fileRef = D2D5915957E743BEA9655308 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/mach_time.c */; settings = {COMPILER_FLAGS = ""; }; };
+		8674C993C92449D0B954C194 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/scale.h */ = {isa = PBXBuildFile; fileRef = 262F99B715764E2FBB73817B /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/scale.h */; settings = {COMPILER_FLAGS = ""; }; };
+		874626508BCC440EA929256B /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/posix_tls.c */ = {isa = PBXBuildFile; fileRef = 22207EDF25814524B061102D /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/posix_tls.c */; settings = {COMPILER_FLAGS = ""; }; };
+		88FAB713F73D430391E17433 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = 737D515BAE104CBAB2CE33FB /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/input.c */; settings = {COMPILER_FLAGS = ""; }; };
+		89917549A1184A1394D493BF /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/cpu_id.h */ = {isa = PBXBuildFile; fileRef = 8EAE9A3ADC4740EFA45A523D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/cpu_id.h */; settings = {COMPILER_FLAGS = ""; }; };
+		8A0A65BA0F0D4FDD9D2AFE38 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate.cc */ = {isa = PBXBuildFile; fileRef = A1B8B4C398C24A78A5DC40C9 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		8ABF7733BABA4BCABB029266 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/planar_functions.h */ = {isa = PBXBuildFile; fileRef = B32DED675D494DD9A0BF3F3B /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/planar_functions.h */; settings = {COMPILER_FLAGS = ""; }; };
+		8FD19C25C12244B2991FD097 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/convert_argb.h */ = {isa = PBXBuildFile; fileRef = 6C2BA4D0F2D5480DABBF7FA7 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/convert_argb.h */; settings = {COMPILER_FLAGS = ""; }; };
+		928E7BFF7E0244D585A8345F /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 436EC0BA7DDE47F4B9BD822B /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/include/GLFW/glfw3.h */; settings = {COMPILER_FLAGS = ""; }; };
+		967B6D13FC904B6A945720D2 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = B449A329280745DFA392FADF /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		9FAD027266D24AA68950E519 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_argb.cc */ = {isa = PBXBuildFile; fileRef = AAE477D603A84EDFB5BFFC4B /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_argb.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		AC918BB58B584571A5681B27 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/scale_argb.h */ = {isa = PBXBuildFile; fileRef = D3CDF11D61134DEA8DFD267A /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/scale_argb.h */; settings = {COMPILER_FLAGS = ""; }; };
+		AE5BDE2F74E245B982983FED /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_any.cc */ = {isa = PBXBuildFile; fileRef = BBE571AFAA10484A888FF28D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_any.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		B1745DAD33DE4276AE7068CB /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/iokit_joystick.h */ = {isa = PBXBuildFile; fileRef = 63C0274FE125440EA9F88DD5 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/iokit_joystick.h */; settings = {COMPILER_FLAGS = ""; }; };
+		B1993855FF0A4E52A012A463 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_to_i420.cc */ = {isa = PBXBuildFile; fileRef = 61E09798A403404999F1E17F /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_to_i420.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		B4F576DAD5C34B998C95E177 /* /Users/pavelershov/Job/WebM_Practice/src/Helpers.cpp */ = {isa = PBXBuildFile; fileRef = E5A064D21047454D9F50118B /* /Users/pavelershov/Job/WebM_Practice/src/Helpers.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		B6A3C6EECAD14018BF3AF049 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/video_common.cc */ = {isa = PBXBuildFile; fileRef = E25EDD8BC4C84E08B7239847 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/video_common.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		BE2656E4014B45039847E88F /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_neon.cc */ = {isa = PBXBuildFile; fileRef = 50541C19D7E449938CCDE9BD /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_neon.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		C8AD28FED7624D5EB666E01B /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_win.cc */ = {isa = PBXBuildFile; fileRef = 91EF90A07FD542E6907103AB /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_win.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		CB9728306C1F4A6295B701D6 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = 06A4F6F9908C484DB06B5D2F /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_init.m */; settings = {COMPILER_FLAGS = ""; }; };
+		CFE2BC96588A4B5C88B40529 /* /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glfw/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = 07D2832463144200906E758E /* /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glfw/src/glfw_config.h */; settings = {COMPILER_FLAGS = ""; }; };
+		D33BCD38100F45A492191A29 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/planar_functions.cc */ = {isa = PBXBuildFile; fileRef = 77672AABC836411AB7359B7A /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/planar_functions.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		DADF4CF3998946DDA553E8FC /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_gcc.cc */ = {isa = PBXBuildFile; fileRef = 552A7B37885B41EB80ADD046 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_gcc.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		DFD8ECA79DF248F3A47F7082 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_gcc.cc */ = {isa = PBXBuildFile; fileRef = 5B0B9CC3505945D5AEF68BAB /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_gcc.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		E12A12E6D6AD4D2C8D607DBF /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 2107E65AE4D64B078EA35874 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		E174D4CCA84845918B93EBBD /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/scale_row.h */ = {isa = PBXBuildFile; fileRef = 6E0696646FAE4F268EB5E370 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/scale_row.h */; settings = {COMPILER_FLAGS = ""; }; };
+		E277933E799D4D17A1BD7FE7 /* /Users/pavelershov/Job/WebM_Practice/src/Shaders.h */ = {isa = PBXBuildFile; fileRef = 222E5344973D4F608939BCED /* /Users/pavelershov/Job/WebM_Practice/src/Shaders.h */; settings = {COMPILER_FLAGS = ""; }; };
+		E28CB59BD5314165857CF035 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/posix_tls.h */ = {isa = PBXBuildFile; fileRef = F171BA4DC9574C7AB4322E85 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/posix_tls.h */; settings = {COMPILER_FLAGS = ""; }; };
+		EE75530279B34A3A8450827D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_neon64.cc */ = {isa = PBXBuildFile; fileRef = 6D33B02709DE475099CF0DA1 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_neon64.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		F14C2FEA28BA44A2931E2B55 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_argb.cc */ = {isa = PBXBuildFile; fileRef = 74EB2F437A1C4F839747006F /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_argb.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		F779285E26A44646B2217C5C /* /Users/pavelershov/Job/WebM_Practice/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = B28D7813D14A41B782E6835F /* /Users/pavelershov/Job/WebM_Practice/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		F8B4A859AAE2494ABEB7F5A4 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/convert_from_argb.h */ = {isa = PBXBuildFile; fileRef = 8B0B9D5ADF4C4004A31C37F4 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/convert_from_argb.h */; settings = {COMPILER_FLAGS = ""; }; };
+		F994466D1A3C4B26AA712503 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = 1EE72CC9611545CE8E5AD5C9 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_platform.h */; settings = {COMPILER_FLAGS = ""; }; };
+		FD883303926F41CC8E4DFA9C /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = C4353659E0A8411884E100E3 /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		FDCBCE1BBBE74C1BB9EA8DB6 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_gcc.cc */ = {isa = PBXBuildFile; fileRef = 28448BA406944C18BAA5DB0E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_gcc.cc */; settings = {COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		709B6701F0864DDB9FA88719 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		ABF0591C69A74384B3AE56C5 = {
+			isa = PBXBuildStyle;
+		};
+		DE21D5B5E35C4EF9A0D9A716 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		EA88DD78BEE14056ADA4AF5A /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		EE646F10036A4447B01E4FA6 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		066D1FBBE1374A868FACB4C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BF7FCC6CA6B4967B7A1E14F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E7AFEF9FB584BE888F54B96;
+			remoteInfo = ZERO_CHECK;
+		};
+		0A90AFB4808448019373E17D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BF7FCC6CA6B4967B7A1E14F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB09E1CCED4654A609F76E;
+			remoteInfo = libglew;
+		};
+		238AC1C3A33749238F80C555 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BF7FCC6CA6B4967B7A1E14F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BA42CBCC9E14430A05FC84E;
+			remoteInfo = ALL_BUILD;
+		};
+		428B0C134F024CB381405FB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BF7FCC6CA6B4967B7A1E14F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCB333F36CC54188A47496B2;
+			remoteInfo = libyuv;
+		};
+		4A3A6A63E6AC4832B170C7D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BF7FCC6CA6B4967B7A1E14F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 999B495FEEC44ED39E0DB6D8;
+			remoteInfo = glfw;
+		};
+		60F3FC2A610E491DB2BDC8BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BF7FCC6CA6B4967B7A1E14F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCB333F36CC54188A47496B2;
+			remoteInfo = libyuv;
+		};
+		73027D6D920446A4AC4B14F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BF7FCC6CA6B4967B7A1E14F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23EAC553D9A6450E9A2ACFB6;
+			remoteInfo = WebM_Player;
+		};
+		7325ECBF52504C6AB0DB5DA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BF7FCC6CA6B4967B7A1E14F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E7AFEF9FB584BE888F54B96;
+			remoteInfo = ZERO_CHECK;
+		};
+		B93D03A6670A43339E78CF09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BF7FCC6CA6B4967B7A1E14F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1FB09E1CCED4654A609F76E;
+			remoteInfo = libglew;
+		};
+		CA116B466E44495A9CD79D92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BF7FCC6CA6B4967B7A1E14F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A4D4EA7DE5C45E8B1D3F0EC;
+			remoteInfo = libnestegg;
+		};
+		DA42BDB49A364A26BD0D4356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BF7FCC6CA6B4967B7A1E14F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 999B495FEEC44ED39E0DB6D8;
+			remoteInfo = glfw;
+		};
+		E4E8B264E09C487585319512 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BF7FCC6CA6B4967B7A1E14F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A4D4EA7DE5C45E8B1D3F0EC;
+			remoteInfo = libnestegg;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		001EA152E2FC44A391A8000E /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = libs/glfw/src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
+		06A4F6F9908C484DB06B5D2F /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = libs/glfw/src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
+		07D2832463144200906E758E /* /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glfw/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = build/OSX/libs/glfw/src/glfw_config.h; sourceTree = SOURCE_ROOT; };
+		08161DF6F1724D9088B01529 /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include/nestegg/nestegg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nestegg.h; path = libs/libnestegg/include/nestegg/nestegg.h; sourceTree = SOURCE_ROOT; };
+		09A85D8FC199444EABCD430E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = scale.cc; path = libs/libyuv/source/scale.cc; sourceTree = SOURCE_ROOT; };
+		0AF8CCD02642452BB0A2BF27 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_neon64.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = rotate_neon64.cc; path = libs/libyuv/source/rotate_neon64.cc; sourceTree = SOURCE_ROOT; };
+		1485A54B8BB1480D88003DC4 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/rotate_row.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = rotate_row.h; path = libs/libyuv/include/libyuv/rotate_row.h; sourceTree = SOURCE_ROOT; };
+		179ED9D0F59040808261AD2B /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/row.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = row.h; path = libs/libyuv/include/libyuv/row.h; sourceTree = SOURCE_ROOT; };
+		1A14B311F6A14620B9F68968 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = libs/glfw/src/internal.h; sourceTree = SOURCE_ROOT; };
+		1DF73F484F484301976B08D9 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/iokit_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = iokit_joystick.m; path = libs/glfw/src/iokit_joystick.m; sourceTree = SOURCE_ROOT; };
+		1EE72CC9611545CE8E5AD5C9 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = libs/glfw/src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
+		1FE366C87DCD48688E2076C3 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/macros_msa.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = macros_msa.h; path = libs/libyuv/include/libyuv/macros_msa.h; sourceTree = SOURCE_ROOT; };
+		2058583CF0FC4491B7B85C21 /* libyuv */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblibyuv.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2107E65AE4D64B078EA35874 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = libs/libyuv/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		21603F7347874582A6D948D5 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/rotate_argb.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = rotate_argb.h; path = libs/libyuv/include/libyuv/rotate_argb.h; sourceTree = SOURCE_ROOT; };
+		21CCA93EA2564FD993BA0B64 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/mjpeg_decoder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mjpeg_decoder.h; path = libs/libyuv/include/libyuv/mjpeg_decoder.h; sourceTree = SOURCE_ROOT; };
+		22207EDF25814524B061102D /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/posix_tls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_tls.c; path = libs/glfw/src/posix_tls.c; sourceTree = SOURCE_ROOT; };
+		222E5344973D4F608939BCED /* /Users/pavelershov/Job/WebM_Practice/src/Shaders.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Shaders.h; path = src/Shaders.h; sourceTree = SOURCE_ROOT; };
+		24ECDD3FAC43481A9761FEC1 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/convert.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = convert.h; path = libs/libyuv/include/libyuv/convert.h; sourceTree = SOURCE_ROOT; };
+		262F99B715764E2FBB73817B /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/scale.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = scale.h; path = libs/libyuv/include/libyuv/scale.h; sourceTree = SOURCE_ROOT; };
+		27D130548A4143EC83C7CE99 /* /Users/pavelershov/Job/WebM_Practice/src/DrawManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DrawManager.h; path = src/DrawManager.h; sourceTree = SOURCE_ROOT; };
+		28448BA406944C18BAA5DB0E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_gcc.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = compare_gcc.cc; path = libs/libyuv/source/compare_gcc.cc; sourceTree = SOURCE_ROOT; };
+		288C979D00FA44DE9F7B70BF /* /Users/pavelershov/Job/WebM_Practice/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		2A084C396042434099E411A9 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/mjpeg_decoder.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mjpeg_decoder.cc; path = libs/libyuv/source/mjpeg_decoder.cc; sourceTree = SOURCE_ROOT; };
+		2B6839B393BA40E397B4FD98 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_neon.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = rotate_neon.cc; path = libs/libyuv/source/rotate_neon.cc; sourceTree = SOURCE_ROOT; };
+		2E356B6A99BC4015BCC41359 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/mjpeg_validate.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mjpeg_validate.cc; path = libs/libyuv/source/mjpeg_validate.cc; sourceTree = SOURCE_ROOT; };
+		2F62CD391E664AA3B6DC08C1 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_jpeg.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = convert_jpeg.cc; path = libs/libyuv/source/convert_jpeg.cc; sourceTree = SOURCE_ROOT; };
+		3194AB34BA6F432AA3BEB186 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = convert.cc; path = libs/libyuv/source/convert.cc; sourceTree = SOURCE_ROOT; };
+		32317A201F7A4045AD679991 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_common.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = rotate_common.cc; path = libs/libyuv/source/rotate_common.cc; sourceTree = SOURCE_ROOT; };
+		386B2AC387974775BD0AC628 /* /Users/pavelershov/Job/WebM_Practice/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		3A963D35155942729ADFC17E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_win.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = scale_win.cc; path = libs/libyuv/source/scale_win.cc; sourceTree = SOURCE_ROOT; };
+		3EB5659FA8A94F4FB0920E22 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = libs/glfw/src/context.c; sourceTree = SOURCE_ROOT; };
+		3FD8D1FE92CF4C1EBF6B5D7E /* /Users/pavelershov/Job/WebM_Practice/libs/glew/src/glew.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glew.c; path = libs/glew/src/glew.c; sourceTree = SOURCE_ROOT; };
+		40681E22DFD94DBC9A22D1B7 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_common.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = scale_common.cc; path = libs/libyuv/source/scale_common.cc; sourceTree = SOURCE_ROOT; };
+		436EC0BA7DDE47F4B9BD822B /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = libs/glfw/include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
+		4772AC09FB134C6E984DA6F2 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_mips.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = rotate_mips.cc; path = libs/libyuv/source/rotate_mips.cc; sourceTree = SOURCE_ROOT; };
+		50541C19D7E449938CCDE9BD /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_neon.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = compare_neon.cc; path = libs/libyuv/source/compare_neon.cc; sourceTree = SOURCE_ROOT; };
+		5104736AA01F4AAFA0BD0AAE /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_argb.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = rotate_argb.cc; path = libs/libyuv/source/rotate_argb.cc; sourceTree = SOURCE_ROOT; };
+		52813D5671944BFE9A48FBF6 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/rotate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = rotate.h; path = libs/libyuv/include/libyuv/rotate.h; sourceTree = SOURCE_ROOT; };
+		54092AE8D8B2480AA154B90E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_any.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = row_any.cc; path = libs/libyuv/source/row_any.cc; sourceTree = SOURCE_ROOT; };
+		552A7B37885B41EB80ADD046 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_gcc.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = row_gcc.cc; path = libs/libyuv/source/row_gcc.cc; sourceTree = SOURCE_ROOT; };
+		5B0B9CC3505945D5AEF68BAB /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_gcc.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = scale_gcc.cc; path = libs/libyuv/source/scale_gcc.cc; sourceTree = SOURCE_ROOT; };
+		61E09798A403404999F1E17F /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_to_i420.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = convert_to_i420.cc; path = libs/libyuv/source/convert_to_i420.cc; sourceTree = SOURCE_ROOT; };
+		63C0274FE125440EA9F88DD5 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/iokit_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = iokit_joystick.h; path = libs/glfw/src/iokit_joystick.h; sourceTree = SOURCE_ROOT; };
+		667AAB32FFB04B09B58469A6 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/compare.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = compare.h; path = libs/libyuv/include/libyuv/compare.h; sourceTree = SOURCE_ROOT; };
+		682CC9BECDDE47FABCED7ADB /* /Users/pavelershov/Job/WebM_Practice/libs/glew/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = libs/glew/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		6868ADFA907543D4893D6980 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_neon64.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = compare_neon64.cc; path = libs/libyuv/source/compare_neon64.cc; sourceTree = SOURCE_ROOT; };
+		6C2BA4D0F2D5480DABBF7FA7 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/convert_argb.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = convert_argb.h; path = libs/libyuv/include/libyuv/convert_argb.h; sourceTree = SOURCE_ROOT; };
+		6C3D8CAB8CF34604A46C9F0B /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_from.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = convert_from.cc; path = libs/libyuv/source/convert_from.cc; sourceTree = SOURCE_ROOT; };
+		6D33B02709DE475099CF0DA1 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_neon64.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = row_neon64.cc; path = libs/libyuv/source/row_neon64.cc; sourceTree = SOURCE_ROOT; };
+		6E0696646FAE4F268EB5E370 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/scale_row.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = scale_row.h; path = libs/libyuv/include/libyuv/scale_row.h; sourceTree = SOURCE_ROOT; };
+		6FD549DE7DFE42B8967B3F20 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_neon64.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = scale_neon64.cc; path = libs/libyuv/source/scale_neon64.cc; sourceTree = SOURCE_ROOT; };
+		7277677D24C141F1AE4DD58E /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/src/nestegg.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = nestegg.c; path = libs/libnestegg/src/nestegg.c; sourceTree = SOURCE_ROOT; };
+		73040E7399B74AB280452A94 /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		737D515BAE104CBAB2CE33FB /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = libs/glfw/src/input.c; sourceTree = SOURCE_ROOT; };
+		74EB2F437A1C4F839747006F /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_argb.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = convert_argb.cc; path = libs/libyuv/source/convert_argb.cc; sourceTree = SOURCE_ROOT; };
+		76F60EFED48C4FF2BF93550A /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = libs/glfw/src/monitor.c; sourceTree = SOURCE_ROOT; };
+		77672AABC836411AB7359B7A /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/planar_functions.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = planar_functions.cc; path = libs/libyuv/source/planar_functions.cc; sourceTree = SOURCE_ROOT; };
+		77C728C6909A4219A7EDEBF1 /* WebM_Player */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = WebM_Player; sourceTree = BUILT_PRODUCTS_DIR; };
+		7889EDAC6B294F3E90E80518 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/convert_from.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = convert_from.h; path = libs/libyuv/include/libyuv/convert_from.h; sourceTree = SOURCE_ROOT; };
+		794EFD4624AF4DE89AFCDFEC /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = libs/glfw/src/window.c; sourceTree = SOURCE_ROOT; };
+		7E5A978BB3BE42AF9BE68852 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_from_argb.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = convert_from_argb.cc; path = libs/libyuv/source/convert_from_argb.cc; sourceTree = SOURCE_ROOT; };
+		8B0B9D5ADF4C4004A31C37F4 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/convert_from_argb.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = convert_from_argb.h; path = libs/libyuv/include/libyuv/convert_from_argb.h; sourceTree = SOURCE_ROOT; };
+		8C9EEEB0BB5840FC915EF0EF /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/version.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = version.h; path = libs/libyuv/include/libyuv/version.h; sourceTree = SOURCE_ROOT; };
+		8EAE9A3ADC4740EFA45A523D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/cpu_id.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cpu_id.h; path = libs/libyuv/include/libyuv/cpu_id.h; sourceTree = SOURCE_ROOT; };
+		91EF90A07FD542E6907103AB /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_win.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = row_win.cc; path = libs/libyuv/source/row_win.cc; sourceTree = SOURCE_ROOT; };
+		9432820E6D2A4A56A8C8438D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_win.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = compare_win.cc; path = libs/libyuv/source/compare_win.cc; sourceTree = SOURCE_ROOT; };
+		9555B20084104A53AF45E6EB /* /Users/pavelershov/Job/WebM_Practice/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		982D53A12FB24094B5D76A0E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_common.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = compare_common.cc; path = libs/libyuv/source/compare_common.cc; sourceTree = SOURCE_ROOT; };
+		98A170E2448D42E58A51D61A /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_win.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = rotate_win.cc; path = libs/libyuv/source/rotate_win.cc; sourceTree = SOURCE_ROOT; };
+		98B7DB5786C04EA6AAF26EB2 /* libglew */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglewd.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BFEB2EB40B64DB699EF2C5C /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = libs/glfw/src/init.c; sourceTree = SOURCE_ROOT; };
+		9CDC3E4509E849AABD3C33A4 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_msa.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = row_msa.cc; path = libs/libyuv/source/row_msa.cc; sourceTree = SOURCE_ROOT; };
+		A1B8B4C398C24A78A5DC40C9 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = rotate.cc; path = libs/libyuv/source/rotate.cc; sourceTree = SOURCE_ROOT; };
+		A8C667EA2F224D80A17CFAB4 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = libs/glfw/src/nsgl_context.h; sourceTree = SOURCE_ROOT; };
+		AAE477D603A84EDFB5BFFC4B /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_argb.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = scale_argb.cc; path = libs/libyuv/source/scale_argb.cc; sourceTree = SOURCE_ROOT; };
+		AC079EA057A449DFA05B1F8D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_neon.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = scale_neon.cc; path = libs/libyuv/source/scale_neon.cc; sourceTree = SOURCE_ROOT; };
+		AC6B126399974FD1A32B0758 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_msa.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = scale_msa.cc; path = libs/libyuv/source/scale_msa.cc; sourceTree = SOURCE_ROOT; };
+		B14128C8D2264A6185CE40A2 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = libs/glfw/src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
+		B28D7813D14A41B782E6835F /* /Users/pavelershov/Job/WebM_Practice/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B2C31F525B494E408D878BB6 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_mips.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = row_mips.cc; path = libs/libyuv/source/row_mips.cc; sourceTree = SOURCE_ROOT; };
+		B32DED675D494DD9A0BF3F3B /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/planar_functions.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = planar_functions.h; path = libs/libyuv/include/libyuv/planar_functions.h; sourceTree = SOURCE_ROOT; };
+		B449A329280745DFA392FADF /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = libs/glfw/src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B53E68CD6D7E4FE6828F28AD /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_any.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = scale_any.cc; path = libs/libyuv/source/scale_any.cc; sourceTree = SOURCE_ROOT; };
+		B9E1ED21A5914266AE8836CE /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_to_argb.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = convert_to_argb.cc; path = libs/libyuv/source/convert_to_argb.cc; sourceTree = SOURCE_ROOT; };
+		BBE571AFAA10484A888FF28D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_any.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = rotate_any.cc; path = libs/libyuv/source/rotate_any.cc; sourceTree = SOURCE_ROOT; };
+		BE8C5871EB3B4FD8B8F26B64 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_gcc.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = rotate_gcc.cc; path = libs/libyuv/source/rotate_gcc.cc; sourceTree = SOURCE_ROOT; };
+		C11C497C94FB42CCAC604B35 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_msa.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = rotate_msa.cc; path = libs/libyuv/source/rotate_msa.cc; sourceTree = SOURCE_ROOT; };
+		C4353659E0A8411884E100E3 /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = libs/libnestegg/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		D2D5915957E743BEA9655308 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/mach_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mach_time.c; path = libs/glfw/src/mach_time.c; sourceTree = SOURCE_ROOT; };
+		D3CDF11D61134DEA8DFD267A /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/scale_argb.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = scale_argb.h; path = libs/libyuv/include/libyuv/scale_argb.h; sourceTree = SOURCE_ROOT; };
+		D63E13F231C84A57A488462F /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_neon.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = row_neon.cc; path = libs/libyuv/source/row_neon.cc; sourceTree = SOURCE_ROOT; };
+		DC8983B995E64CBC9283B9D9 /* /Users/pavelershov/Job/WebM_Practice/src/Shaders.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Shaders.cpp; path = src/Shaders.cpp; sourceTree = SOURCE_ROOT; };
+		DDDA903F9E31423BBB2EC9FD /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/video_common.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = video_common.h; path = libs/libyuv/include/libyuv/video_common.h; sourceTree = SOURCE_ROOT; };
+		DE5EE883BBC6455AB58A4153 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = libs/glfw/include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
+		E0E01396BFB747A0B7AF80DF /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/cpu_id.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = cpu_id.cc; path = libs/libyuv/source/cpu_id.cc; sourceTree = SOURCE_ROOT; };
+		E1FE2768BEB0458E84B94FFD /* libnestegg */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblibnestegg.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E25EDD8BC4C84E08B7239847 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/video_common.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = video_common.cc; path = libs/libyuv/source/video_common.cc; sourceTree = SOURCE_ROOT; };
+		E4D0C35988724DE39CBA855D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_mips.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = scale_mips.cc; path = libs/libyuv/source/scale_mips.cc; sourceTree = SOURCE_ROOT; };
+		E5A064D21047454D9F50118B /* /Users/pavelershov/Job/WebM_Practice/src/Helpers.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Helpers.cpp; path = src/Helpers.cpp; sourceTree = SOURCE_ROOT; };
+		E6BF1A57BAB0407D9962372E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_common.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = row_common.cc; path = libs/libyuv/source/row_common.cc; sourceTree = SOURCE_ROOT; };
+		ED7515AC6AD84A2A84649F18 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = libs/glfw/src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
+		EDB9F9A3E8484DF5AF167CF2 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = compare.cc; path = libs/libyuv/source/compare.cc; sourceTree = SOURCE_ROOT; };
+		F171BA4DC9574C7AB4322E85 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/posix_tls.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_tls.h; path = libs/glfw/src/posix_tls.h; sourceTree = SOURCE_ROOT; };
+		F59B6EE0AC314B40AC161230 /* /Users/pavelershov/Job/WebM_Practice/src/Helpers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Helpers.h; path = src/Helpers.h; sourceTree = SOURCE_ROOT; };
+		F5A835371CC341C19BE220C3 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/basic_types.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = basic_types.h; path = libs/libyuv/include/libyuv/basic_types.h; sourceTree = SOURCE_ROOT; };
+		FCAF11944E7E4C4CB7295F36 /* /Users/pavelershov/Job/WebM_Practice/src/DrawManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DrawManager.cpp; path = src/DrawManager.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0B8CBD56CD214160961B1811 /* GLFW3 */ = {
+			isa = PBXGroup;
+			children = (
+				9E88AFC9D14940BE93652973 /* glfw */,
+			);
+			name = GLFW3;
+			sourceTree = "<group>";
+		};
+		0FF49D5EE5A54F2A96B6A10F /* libglew */ = {
+			isa = PBXGroup;
+			children = (
+				1FA61390A5D74822B566BDB6 /* Source Files */,
+				682CC9BECDDE47FABCED7ADB /* /Users/pavelershov/Job/WebM_Practice/libs/glew/CMakeLists.txt */,
+			);
+			name = libglew;
+			sourceTree = "<group>";
+		};
+		1C9A27F8EFFB479CAFED7EE3 /* libnestegg */ = {
+			isa = PBXGroup;
+			children = (
+				F7248987AC2E4BBEB6DC4876 /* Header Files */,
+				28367A4DDD9A490DA969792A /* Source Files */,
+				C4353659E0A8411884E100E3 /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/CMakeLists.txt */,
+			);
+			name = libnestegg;
+			sourceTree = "<group>";
+		};
+		1F985A78345A404F8FC6EF57 /* WebM_Player */ = {
+			isa = PBXGroup;
+			children = (
+				A4A74E73379341ECAE7B1A99 /* src */,
+				B28D7813D14A41B782E6835F /* /Users/pavelershov/Job/WebM_Practice/CMakeLists.txt */,
+			);
+			name = WebM_Player;
+			sourceTree = "<group>";
+		};
+		1FA61390A5D74822B566BDB6 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				3FD8D1FE92CF4C1EBF6B5D7E /* /Users/pavelershov/Job/WebM_Practice/libs/glew/src/glew.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		23B72892C0834BEFB3AB35A1 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		2537E10FFF4B40668D056B13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77C728C6909A4219A7EDEBF1 /* WebM_Player */,
+				98B7DB5786C04EA6AAF26EB2 /* libglew */,
+				2058583CF0FC4491B7B85C21 /* libyuv */,
+				73040E7399B74AB280452A94 /* glfw */,
+				E1FE2768BEB0458E84B94FFD /* libnestegg */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28367A4DDD9A490DA969792A /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				7277677D24C141F1AE4DD58E /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/src/nestegg.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		323C6535D7AC499CA6880DD5 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5A835371CC341C19BE220C3 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/basic_types.h */,
+				667AAB32FFB04B09B58469A6 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/compare.h */,
+				24ECDD3FAC43481A9761FEC1 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/convert.h */,
+				6C2BA4D0F2D5480DABBF7FA7 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/convert_argb.h */,
+				7889EDAC6B294F3E90E80518 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/convert_from.h */,
+				8B0B9D5ADF4C4004A31C37F4 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/convert_from_argb.h */,
+				8EAE9A3ADC4740EFA45A523D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/cpu_id.h */,
+				1FE366C87DCD48688E2076C3 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/macros_msa.h */,
+				21CCA93EA2564FD993BA0B64 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/mjpeg_decoder.h */,
+				B32DED675D494DD9A0BF3F3B /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/planar_functions.h */,
+				52813D5671944BFE9A48FBF6 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/rotate.h */,
+				21603F7347874582A6D948D5 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/rotate_argb.h */,
+				1485A54B8BB1480D88003DC4 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/rotate_row.h */,
+				179ED9D0F59040808261AD2B /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/row.h */,
+				262F99B715764E2FBB73817B /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/scale.h */,
+				D3CDF11D61134DEA8DFD267A /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/scale_argb.h */,
+				6E0696646FAE4F268EB5E370 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/scale_row.h */,
+				8C9EEEB0BB5840FC915EF0EF /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/version.h */,
+				DDDA903F9E31423BBB2EC9FD /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv/video_common.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		7E8B4177F3F74374BBE96618 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDB9F9A3E8484DF5AF167CF2 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare.cc */,
+				982D53A12FB24094B5D76A0E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_common.cc */,
+				28448BA406944C18BAA5DB0E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_gcc.cc */,
+				50541C19D7E449938CCDE9BD /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_neon.cc */,
+				6868ADFA907543D4893D6980 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_neon64.cc */,
+				9432820E6D2A4A56A8C8438D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_win.cc */,
+				3194AB34BA6F432AA3BEB186 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert.cc */,
+				74EB2F437A1C4F839747006F /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_argb.cc */,
+				6C3D8CAB8CF34604A46C9F0B /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_from.cc */,
+				7E5A978BB3BE42AF9BE68852 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_from_argb.cc */,
+				2F62CD391E664AA3B6DC08C1 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_jpeg.cc */,
+				B9E1ED21A5914266AE8836CE /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_to_argb.cc */,
+				61E09798A403404999F1E17F /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_to_i420.cc */,
+				E0E01396BFB747A0B7AF80DF /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/cpu_id.cc */,
+				2A084C396042434099E411A9 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/mjpeg_decoder.cc */,
+				2E356B6A99BC4015BCC41359 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/mjpeg_validate.cc */,
+				77672AABC836411AB7359B7A /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/planar_functions.cc */,
+				A1B8B4C398C24A78A5DC40C9 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate.cc */,
+				BBE571AFAA10484A888FF28D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_any.cc */,
+				5104736AA01F4AAFA0BD0AAE /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_argb.cc */,
+				32317A201F7A4045AD679991 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_common.cc */,
+				BE8C5871EB3B4FD8B8F26B64 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_gcc.cc */,
+				4772AC09FB134C6E984DA6F2 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_mips.cc */,
+				C11C497C94FB42CCAC604B35 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_msa.cc */,
+				2B6839B393BA40E397B4FD98 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_neon.cc */,
+				0AF8CCD02642452BB0A2BF27 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_neon64.cc */,
+				98A170E2448D42E58A51D61A /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_win.cc */,
+				54092AE8D8B2480AA154B90E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_any.cc */,
+				E6BF1A57BAB0407D9962372E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_common.cc */,
+				552A7B37885B41EB80ADD046 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_gcc.cc */,
+				B2C31F525B494E408D878BB6 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_mips.cc */,
+				9CDC3E4509E849AABD3C33A4 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_msa.cc */,
+				D63E13F231C84A57A488462F /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_neon.cc */,
+				6D33B02709DE475099CF0DA1 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_neon64.cc */,
+				91EF90A07FD542E6907103AB /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_win.cc */,
+				09A85D8FC199444EABCD430E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale.cc */,
+				B53E68CD6D7E4FE6828F28AD /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_any.cc */,
+				AAE477D603A84EDFB5BFFC4B /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_argb.cc */,
+				40681E22DFD94DBC9A22D1B7 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_common.cc */,
+				5B0B9CC3505945D5AEF68BAB /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_gcc.cc */,
+				E4D0C35988724DE39CBA855D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_mips.cc */,
+				AC6B126399974FD1A32B0758 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_msa.cc */,
+				AC079EA057A449DFA05B1F8D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_neon.cc */,
+				6FD549DE7DFE42B8967B3F20 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_neon64.cc */,
+				3A963D35155942729ADFC17E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_win.cc */,
+				E25EDD8BC4C84E08B7239847 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/video_common.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		810D305C3D004152AD482596 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		9E88AFC9D14940BE93652973 /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				DE6E8CFDCB4F48C7ACAC3EC3 /* Source Files */,
+				FBD07414B96F4C58AF3F506F /* Header Files */,
+				B449A329280745DFA392FADF /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		A4A74E73379341ECAE7B1A99 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF11944E7E4C4CB7295F36 /* /Users/pavelershov/Job/WebM_Practice/src/DrawManager.cpp */,
+				27D130548A4143EC83C7CE99 /* /Users/pavelershov/Job/WebM_Practice/src/DrawManager.h */,
+				E5A064D21047454D9F50118B /* /Users/pavelershov/Job/WebM_Practice/src/Helpers.cpp */,
+				F59B6EE0AC314B40AC161230 /* /Users/pavelershov/Job/WebM_Practice/src/Helpers.h */,
+				DC8983B995E64CBC9283B9D9 /* /Users/pavelershov/Job/WebM_Practice/src/Shaders.cpp */,
+				222E5344973D4F608939BCED /* /Users/pavelershov/Job/WebM_Practice/src/Shaders.h */,
+				9555B20084104A53AF45E6EB /* /Users/pavelershov/Job/WebM_Practice/src/main.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		AD18288FF41942ECA61F8EC4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C8F1E91026F942E98F1EA22F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1F985A78345A404F8FC6EF57 /* WebM_Player */,
+				D1F5B34EF8D0407987650E14 /* ALL_BUILD */,
+				FC2266B418B049488EDD8649 /* ZERO_CHECK */,
+				0FF49D5EE5A54F2A96B6A10F /* libglew */,
+				DEA55BE5F3DE4769B479D28F /* libyuv */,
+				0B8CBD56CD214160961B1811 /* GLFW3 */,
+				1C9A27F8EFFB479CAFED7EE3 /* libnestegg */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		D1F5B34EF8D0407987650E14 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				810D305C3D004152AD482596 /* CMake Rules */,
+				386B2AC387974775BD0AC628 /* /Users/pavelershov/Job/WebM_Practice/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		D6FAC33DFD7B43C28B8235D0 = {
+			isa = PBXGroup;
+			children = (
+				C8F1E91026F942E98F1EA22F /* Sources */,
+				AD18288FF41942ECA61F8EC4 /* Resources */,
+				2537E10FFF4B40668D056B13 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE6E8CFDCB4F48C7ACAC3EC3 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				06A4F6F9908C484DB06B5D2F /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_init.m */,
+				B14128C8D2264A6185CE40A2 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_monitor.m */,
+				001EA152E2FC44A391A8000E /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_window.m */,
+				3EB5659FA8A94F4FB0920E22 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/context.c */,
+				9BFEB2EB40B64DB699EF2C5C /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/init.c */,
+				737D515BAE104CBAB2CE33FB /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/input.c */,
+				1DF73F484F484301976B08D9 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/iokit_joystick.m */,
+				D2D5915957E743BEA9655308 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/mach_time.c */,
+				76F60EFED48C4FF2BF93550A /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/monitor.c */,
+				ED7515AC6AD84A2A84649F18 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/nsgl_context.m */,
+				22207EDF25814524B061102D /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/posix_tls.c */,
+				794EFD4624AF4DE89AFCDFEC /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		DEA55BE5F3DE4769B479D28F /* libyuv */ = {
+			isa = PBXGroup;
+			children = (
+				323C6535D7AC499CA6880DD5 /* Header Files */,
+				7E8B4177F3F74374BBE96618 /* Source Files */,
+				2107E65AE4D64B078EA35874 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/CMakeLists.txt */,
+			);
+			name = libyuv;
+			sourceTree = "<group>";
+		};
+		F7248987AC2E4BBEB6DC4876 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				08161DF6F1724D9088B01529 /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include/nestegg/nestegg.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		FBD07414B96F4C58AF3F506F /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				07D2832463144200906E758E /* /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glfw/src/glfw_config.h */,
+				436EC0BA7DDE47F4B9BD822B /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/include/GLFW/glfw3.h */,
+				DE5EE883BBC6455AB58A4153 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/include/GLFW/glfw3native.h */,
+				1EE72CC9611545CE8E5AD5C9 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_platform.h */,
+				1A14B311F6A14620B9F68968 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/internal.h */,
+				63C0274FE125440EA9F88DD5 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/iokit_joystick.h */,
+				A8C667EA2F224D80A17CFAB4 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/nsgl_context.h */,
+				F171BA4DC9574C7AB4322E85 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/posix_tls.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		FC2266B418B049488EDD8649 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				23B72892C0834BEFB3AB35A1 /* CMake Rules */,
+				288C979D00FA44DE9F7B70BF /* /Users/pavelershov/Job/WebM_Practice/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23EAC553D9A6450E9A2ACFB6 /* WebM_Player */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E58C22034094D1189961DEF /* Build configuration list for PBXNativeTarget "WebM_Player" */;
+			buildPhases = (
+				3DCB2F910DDC472590875450 /* Sources */,
+				0C55B8AB22E848638A78184C /* CMake PostBuild Rules */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FEEBE91C7DD47F8B8F44DBE /* PBXTargetDependency */,
+				E26F35C8F4024041838F8399 /* PBXTargetDependency */,
+				B42A5A3A86F245878175995E /* PBXTargetDependency */,
+				138977F287F84EA18C141824 /* PBXTargetDependency */,
+				10058113522C4AFC81B819ED /* PBXTargetDependency */,
+			);
+			name = WebM_Player;
+			productName = WebM_Player;
+			productReference = 77C728C6909A4219A7EDEBF1 /* WebM_Player */;
+			productType = "com.apple.product-type.tool";
+		};
+		5A4D4EA7DE5C45E8B1D3F0EC /* libnestegg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05E54FAD9AF84EAFA46F442E /* Build configuration list for PBXNativeTarget "libnestegg" */;
+			buildPhases = (
+				2D026A60E9BE437C82514367 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libnestegg;
+			productName = libnestegg;
+			productReference = E1FE2768BEB0458E84B94FFD /* libnestegg */;
+			productType = "com.apple.product-type.library.static";
+		};
+		999B495FEEC44ED39E0DB6D8 /* glfw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D7610452BA349ED833F7B6B /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildPhases = (
+				CB04C07B22274206A441830C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glfw;
+			productName = glfw;
+			productReference = 73040E7399B74AB280452A94 /* glfw */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B1FB09E1CCED4654A609F76E /* libglew */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 631ECC726890412AAAB3DD8A /* Build configuration list for PBXNativeTarget "libglew" */;
+			buildPhases = (
+				8BC8065200DB4559B0A91AE2 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libglew;
+			productName = libglew;
+			productReference = 98B7DB5786C04EA6AAF26EB2 /* libglew */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CCB333F36CC54188A47496B2 /* libyuv */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BA97BB1FDD1485CB6333A8C /* Build configuration list for PBXNativeTarget "libyuv" */;
+			buildPhases = (
+				E1F0549C7B0C44E9803C0FC2 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libyuv;
+			productName = libyuv;
+			productReference = 2058583CF0FC4491B7B85C21 /* libyuv */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0BF7FCC6CA6B4967B7A1E14F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0820;
+			};
+			buildConfigurationList = 9D77D7AC02C24DA497648735 /* Build configuration list for PBXProject "WebM_Practice" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				709B6701F0864DDB9FA88719 /* Debug */,
+				DE21D5B5E35C4EF9A0D9A716 /* Release */,
+				EE646F10036A4447B01E4FA6 /* MinSizeRel */,
+				EA88DD78BEE14056ADA4AF5A /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = D6FAC33DFD7B43C28B8235D0;
+			projectDirPath = ../../;
+			projectRoot = "";
+			targets = (
+				0BA42CBCC9E14430A05FC84E /* ALL_BUILD */,
+				A269E836227C46C3970717DB /* RUN_TESTS */,
+				23EAC553D9A6450E9A2ACFB6 /* WebM_Player */,
+				4E7AFEF9FB584BE888F54B96 /* ZERO_CHECK */,
+				55A95994FC0049A9B729F85E /* install */,
+				B1FB09E1CCED4654A609F76E /* libglew */,
+				CCB333F36CC54188A47496B2 /* libyuv */,
+				999B495FEEC44ED39E0DB6D8 /* glfw */,
+				5A4D4EA7DE5C45E8B1D3F0EC /* libnestegg */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C55B8AB22E848638A78184C /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/pavelershov/Job/WebM_Practice/build/OSX -f /Users/pavelershov/Job/WebM_Practice/build/OSX/CMakeScripts/WebM_Player_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		3DA4C0F2509F4A80B1617B43 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		60749ACA4BB74C6E9D26F469 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/pavelershov/Job/WebM_Practice/build/OSX -f /Users/pavelershov/Job/WebM_Practice/build/OSX/CMakeScripts/RUN_TESTS_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		CD575AEFA43F4453BE7B4F2D /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/pavelershov/Job/WebM_Practice/build/OSX -f /Users/pavelershov/Job/WebM_Practice/build/OSX/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		D6D48483F5F5472C847ECF89 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		DAE7EE968CBC4C03AEE19AE5 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		DB790B7FDF53478B8DB51A3F /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/pavelershov/Job/WebM_Practice/build/OSX -f /Users/pavelershov/Job/WebM_Practice/build/OSX/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		E7C2C45D2A5041F0911BB176 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		F5D3A75AB775493D9E79E3EA /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/pavelershov/Job/WebM_Practice/build/OSX -f /Users/pavelershov/Job/WebM_Practice/build/OSX/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D026A60E9BE437C82514367 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80530662E9B14C388CB0FF1E /* /Users/pavelershov/Job/WebM_Practice/libs/libnestegg/src/nestegg.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DCB2F910DDC472590875450 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CEC9C55AD9E4682B64FA200 /* /Users/pavelershov/Job/WebM_Practice/src/DrawManager.cpp */,
+				B4F576DAD5C34B998C95E177 /* /Users/pavelershov/Job/WebM_Practice/src/Helpers.cpp */,
+				0A9F685DC92F4318A4AC800B /* /Users/pavelershov/Job/WebM_Practice/src/Shaders.cpp */,
+				2014C67654B54DF5AF85FA49 /* /Users/pavelershov/Job/WebM_Practice/src/main.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BC8065200DB4559B0A91AE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ECABBD298334D39B00ED506 /* /Users/pavelershov/Job/WebM_Practice/libs/glew/src/glew.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB04C07B22274206A441830C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB9728306C1F4A6295B701D6 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_init.m */,
+				0F3ABB2B6EEB4E49A970D455 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_monitor.m */,
+				34BC4F109BBD4017B536AAD7 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/cocoa_window.m */,
+				42D5CB0E8C3F425C8C63C64D /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/context.c */,
+				3CC10AF5E1FD4DE1BC801675 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/init.c */,
+				88FAB713F73D430391E17433 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/input.c */,
+				4DA570063CFE4F22B57A5D2F /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/iokit_joystick.m */,
+				8660D6E97C3C47B2808ACE99 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/mach_time.c */,
+				3B51B2F5DC0B4D199B508640 /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/monitor.c */,
+				2658DE37DAE94E718B0AC11A /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/nsgl_context.m */,
+				874626508BCC440EA929256B /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/posix_tls.c */,
+				6057D0B6128E4D5AA58C656E /* /Users/pavelershov/Job/WebM_Practice/libs/glfw/src/window.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1F0549C7B0C44E9803C0FC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				434B796D0CD74F6BA5559A05 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare.cc */,
+				66E8D07E663A446DA2821D32 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_common.cc */,
+				FDCBCE1BBBE74C1BB9EA8DB6 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_gcc.cc */,
+				BE2656E4014B45039847E88F /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_neon.cc */,
+				5956CF1AF3414E338BD0AC10 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_neon64.cc */,
+				042521427053446A81D50CDD /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/compare_win.cc */,
+				7AC7E8F19EEB43E1B70785D7 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert.cc */,
+				F14C2FEA28BA44A2931E2B55 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_argb.cc */,
+				2A069AC2647E42399E8E9A51 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_from.cc */,
+				572C32C3601C4357B027AAFD /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_from_argb.cc */,
+				6D3A34A4FBA842039AF381CE /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_jpeg.cc */,
+				5825DC96B8B64E5286B4155D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_to_argb.cc */,
+				B1993855FF0A4E52A012A463 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/convert_to_i420.cc */,
+				7F29B3F126A945C2B963CDBA /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/cpu_id.cc */,
+				47E290965E40405095B85B6E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/mjpeg_decoder.cc */,
+				4F2E10F0F8C24728B4D37F3D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/mjpeg_validate.cc */,
+				D33BCD38100F45A492191A29 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/planar_functions.cc */,
+				8A0A65BA0F0D4FDD9D2AFE38 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate.cc */,
+				AE5BDE2F74E245B982983FED /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_any.cc */,
+				18D7CA5CDFA84FCF8A5EE5D0 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_argb.cc */,
+				6649EF3D59514C0E917D5DA4 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_common.cc */,
+				6260A8F46C374096ACA19B9F /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_gcc.cc */,
+				01D461B6989C4E42AA7E8533 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_mips.cc */,
+				377009D18715445EA58903F8 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_msa.cc */,
+				664048D6B09946508BCC3E1E /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_neon.cc */,
+				1928714583A7477D8CAA89B9 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_neon64.cc */,
+				5A1F5D988A1E4A19998AEF91 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/rotate_win.cc */,
+				5152E76791FC43A7A18CD736 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_any.cc */,
+				09EE675A7FC24EF6B6E6DC97 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_common.cc */,
+				DADF4CF3998946DDA553E8FC /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_gcc.cc */,
+				72F282EB70FC4289A0D4EFA7 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_mips.cc */,
+				382790C008F046F7AC655E28 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_msa.cc */,
+				2BEEB0CCBA784D959594319A /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_neon.cc */,
+				EE75530279B34A3A8450827D /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_neon64.cc */,
+				C8AD28FED7624D5EB666E01B /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/row_win.cc */,
+				01D7157298CE4AAE809252E9 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale.cc */,
+				7DD3B67BC80C4F949EC5F100 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_any.cc */,
+				9FAD027266D24AA68950E519 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_argb.cc */,
+				0C60DEC4E2194EB6B37D17B9 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_common.cc */,
+				DFD8ECA79DF248F3A47F7082 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_gcc.cc */,
+				7E3A14CA6E354369A08077AD /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_mips.cc */,
+				180E093A01864FE3BEA0F9A4 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_msa.cc */,
+				42278810F1ED4C98B62AB352 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_neon.cc */,
+				2BC9207298CE486D92BC8117 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_neon64.cc */,
+				3419706F9DE1416DBE654AA9 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/scale_win.cc */,
+				B6A3C6EECAD14018BF3AF049 /* /Users/pavelershov/Job/WebM_Practice/libs/libyuv/source/video_common.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D5E16C1C34743129ED3D1DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E7AFEF9FB584BE888F54B96 /* ZERO_CHECK */;
+			targetProxy = 066D1FBBE1374A868FACB4C8 /* PBXContainerItemProxy */;
+		};
+		10058113522C4AFC81B819ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A4D4EA7DE5C45E8B1D3F0EC /* libnestegg */;
+			targetProxy = CA116B466E44495A9CD79D92 /* PBXContainerItemProxy */;
+		};
+		138977F287F84EA18C141824 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 999B495FEEC44ED39E0DB6D8 /* glfw */;
+			targetProxy = DA42BDB49A364A26BD0D4356 /* PBXContainerItemProxy */;
+		};
+		4684CB0678394C7680194C8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A4D4EA7DE5C45E8B1D3F0EC /* libnestegg */;
+			targetProxy = E4E8B264E09C487585319512 /* PBXContainerItemProxy */;
+		};
+		7EFFD8ECCFD8494B968B9F59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23EAC553D9A6450E9A2ACFB6 /* WebM_Player */;
+			targetProxy = 73027D6D920446A4AC4B14F8 /* PBXContainerItemProxy */;
+		};
+		9A38613FD8694613830EB406 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB09E1CCED4654A609F76E /* libglew */;
+			targetProxy = 0A90AFB4808448019373E17D /* PBXContainerItemProxy */;
+		};
+		9FEEBE91C7DD47F8B8F44DBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E7AFEF9FB584BE888F54B96 /* ZERO_CHECK */;
+			targetProxy = 7325ECBF52504C6AB0DB5DA7 /* PBXContainerItemProxy */;
+		};
+		B409D301791D489EA7BE69CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BA42CBCC9E14430A05FC84E /* ALL_BUILD */;
+			targetProxy = 238AC1C3A33749238F80C555 /* PBXContainerItemProxy */;
+		};
+		B42A5A3A86F245878175995E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCB333F36CC54188A47496B2 /* libyuv */;
+			targetProxy = 428B0C134F024CB381405FB4 /* PBXContainerItemProxy */;
+		};
+		B53DFA0DE31145BC9CAACCB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 999B495FEEC44ED39E0DB6D8 /* glfw */;
+			targetProxy = 4A3A6A63E6AC4832B170C7D3 /* PBXContainerItemProxy */;
+		};
+		E26F35C8F4024041838F8399 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1FB09E1CCED4654A609F76E /* libglew */;
+			targetProxy = B93D03A6670A43339E78CF09 /* PBXContainerItemProxy */;
+		};
+		FDDC26E33FE84BC1A0C74C1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCB333F36CC54188A47496B2 /* libyuv */;
+			targetProxy = 60F3FC2A610E491DB2BDC8BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00A91C114025439F85C8E25C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		0782C8916AD949628F742BC5 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		07E6DF72090D4A469A532429 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libnestegg;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		0A04D52E734B4CA4A9986DF8 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libyuv;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libyuv;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		116EF7E380124755A7E00DAF /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		2057E36E1BC644C0B79BF45F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libyuv;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libyuv;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		23A62B7B716C4650B1921FE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/pavelershov/Job/WebM_Practice/build/OSX/lib/Debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_BUILD,GLEW_NO_GLU);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps,/Users/pavelershov/Job/WebM_Practice/libs/glew/./include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glewd;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		2919F1804625417DA20C19D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/build;
+			};
+			name = Release;
+		};
+		2D24C22FD9104FE8B419475A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps,/Users/pavelershov/Job/WebM_Practice/libs/glfw/src,/Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glfw/src);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics        -DNDEBUG -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		2D5F2C039C894D199DDB7AC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		35DFE9C216E9492A8F7BEF35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		3AE3B4839C544859B2B117ED /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libnestegg;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		3C739C7D6D614E61B893A18A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		454757F336144BC2A8A86D57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps,/Users/pavelershov/Job/WebM_Practice/libs/glfw/src,/Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glfw/src);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     -DNDEBUG -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		46204F25B1E44F6D9CD0E3BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libyuv;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libyuv;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		55021187301D43DFBC53320F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/build;
+			};
+			name = RelWithDebInfo;
+		};
+		5599253A933E4CC898A9185C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		5813A591BA1A43A5951A08B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		6525B107BDA9494299A3D8F8 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/pavelershov/Job/WebM_Practice/build/OSX/lib/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_BUILD,GLEW_NO_GLU);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps,/Users/pavelershov/Job/WebM_Practice/libs/glew/./include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics        -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		66C0470ED90546BDB644A11D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/build;
+			};
+			name = Debug;
+		};
+		6C0079CFC2BA4D62B44EF4D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		702F26D2D9704D94AFB1088C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics        -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libnestegg;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		7C5379F528A4487CBAEC94D0 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include/libyuv);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics        -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libyuv;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libyuv;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		82B4977F2540413A95C53089 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     -Wall    -stdlib=libc++ -Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     -Wall    -std=c++11        -DNDEBUG  ";
+				OTHER_LDFLAGS = " -L/usr/local/opt/openssl/lib -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/pavelershov/Job/WebM_Practice/build/OSX/lib/RelWithDebInfo/libglew.a /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg/RelWithDebInfo/liblibnestegg.a /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libyuv/RelWithDebInfo/liblibyuv.a /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glfw/src/RelWithDebInfo/libglfw3.a -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo -ObjC -lz -framework OpenGL";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = WebM_Player;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		91DACFD21DD34E3C9BDA525A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/pavelershov/Job/WebM_Practice/build/OSX/lib/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_BUILD,GLEW_NO_GLU);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps,/Users/pavelershov/Job/WebM_Practice/libs/glew/./include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		94CFAE071C544D0C88434796 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		9CF328174BDC4E459D69DD26 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/build;
+			};
+			name = MinSizeRel;
+		};
+		B010B8D887EB44EEBF302F91 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		B210D81BD0034A2AA61767BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     -Wall    -stdlib=libc++ -Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     -Wall    -std=c++11     -DNDEBUG  ";
+				OTHER_LDFLAGS = " -L/usr/local/opt/openssl/lib -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/pavelershov/Job/WebM_Practice/build/OSX/lib/Release/libglew.a /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg/Release/liblibnestegg.a /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libyuv/Release/liblibyuv.a /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glfw/src/Release/libglfw3.a -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo -ObjC -lz -framework OpenGL";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = WebM_Player;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		B3DFEE91E4F24CDC802A0B39 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps,/Users/pavelershov/Job/WebM_Practice/libs/glfw/src,/Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glfw/src);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     -DNDEBUG -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		B8F7083511074CC9A7642974 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		BBA4B1620E1542709BD3406C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     -Wall    -stdlib=libc++ -Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     -Wall    -std=c++11     -DNDEBUG  ";
+				OTHER_LDFLAGS = " -L/usr/local/opt/openssl/lib -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/pavelershov/Job/WebM_Practice/build/OSX/lib/MinSizeRel/libglew.a /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg/MinSizeRel/liblibnestegg.a /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libyuv/MinSizeRel/liblibyuv.a /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glfw/src/MinSizeRel/libglfw3.a -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo -ObjC -lz -framework OpenGL";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = WebM_Player;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		CBD82EEFB23C4209AF794422 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		D6DDFFDB02974173857FC014 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/pavelershov/Job/WebM_Practice/build/OSX/lib/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_BUILD,GLEW_NO_GLU);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps,/Users/pavelershov/Job/WebM_Practice/libs/glew/./include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glew;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		D705ED8A68764FFB81A35C5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps,/Users/pavelershov/Job/WebM_Practice/libs/glfw/src,/Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glfw/src);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics    -fPIC   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		E564F257BA484333A2E9648A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = libnestegg;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		E947DF2483F14793B0D7455B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		EDC7D82D69754C1A8DA15CD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		F9C6655EC3904CCE816FFAF1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		FC02FC33E4484268849A3E24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/pavelershov/Job/WebM_Practice/libs/glew/include,/Users/pavelershov/Job/WebM_Practice/libs/libnestegg/include,/Users/pavelershov/Job/WebM_Practice/libs/libyuv/include,/Users/pavelershov/Job/WebM_Practice/libs/glm/glm,/Users/pavelershov/Job/WebM_Practice/libs/glfw/include,/Users/pavelershov/Job/WebM_Practice/libs/glfw/deps);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     -Wall    -stdlib=libc++ -Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics     -Wall    -std=c++11     ";
+				OTHER_LDFLAGS = " -L/usr/local/opt/openssl/lib -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/pavelershov/Job/WebM_Practice/build/OSX/lib/Debug/libglewd.a /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libnestegg/Debug/liblibnestegg.a /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/libyuv/Debug/liblibyuv.a /Users/pavelershov/Job/WebM_Practice/build/OSX/libs/glfw/src/Debug/libglfw3.a -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo -ObjC -lz -framework OpenGL";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = WebM_Player;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/pavelershov/Job/WebM_Practice/build/OSX;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05E54FAD9AF84EAFA46F442E /* Build configuration list for PBXNativeTarget "libnestegg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07E6DF72090D4A469A532429 /* Debug */,
+				E564F257BA484333A2E9648A /* Release */,
+				3AE3B4839C544859B2B117ED /* MinSizeRel */,
+				702F26D2D9704D94AFB1088C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1BA97BB1FDD1485CB6333A8C /* Build configuration list for PBXNativeTarget "libyuv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46204F25B1E44F6D9CD0E3BC /* Debug */,
+				2057E36E1BC644C0B79BF45F /* Release */,
+				0A04D52E734B4CA4A9986DF8 /* MinSizeRel */,
+				7C5379F528A4487CBAEC94D0 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1D7610452BA349ED833F7B6B /* Build configuration list for PBXNativeTarget "glfw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D705ED8A68764FFB81A35C5F /* Debug */,
+				454757F336144BC2A8A86D57 /* Release */,
+				B3DFEE91E4F24CDC802A0B39 /* MinSizeRel */,
+				2D24C22FD9104FE8B419475A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		25FFC7F1B8E0440AA540BB28 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDC7D82D69754C1A8DA15CD2 /* Debug */,
+				6C0079CFC2BA4D62B44EF4D7 /* Release */,
+				B010B8D887EB44EEBF302F91 /* MinSizeRel */,
+				5599253A933E4CC898A9185C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2722528010DC47D39534DAAD /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C739C7D6D614E61B893A18A /* Debug */,
+				CBD82EEFB23C4209AF794422 /* Release */,
+				116EF7E380124755A7E00DAF /* MinSizeRel */,
+				F9C6655EC3904CCE816FFAF1 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3B78EDF731E94506B3000DD2 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35DFE9C216E9492A8F7BEF35 /* Debug */,
+				2D5F2C039C894D199DDB7AC8 /* Release */,
+				94CFAE071C544D0C88434796 /* MinSizeRel */,
+				B8F7083511074CC9A7642974 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		631ECC726890412AAAB3DD8A /* Build configuration list for PBXNativeTarget "libglew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23A62B7B716C4650B1921FE5 /* Debug */,
+				91DACFD21DD34E3C9BDA525A /* Release */,
+				D6DDFFDB02974173857FC014 /* MinSizeRel */,
+				6525B107BDA9494299A3D8F8 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8E58C22034094D1189961DEF /* Build configuration list for PBXNativeTarget "WebM_Player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC02FC33E4484268849A3E24 /* Debug */,
+				B210D81BD0034A2AA61767BD /* Release */,
+				BBA4B1620E1542709BD3406C /* MinSizeRel */,
+				82B4977F2540413A95C53089 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9D77D7AC02C24DA497648735 /* Build configuration list for PBXProject "WebM_Practice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66C0470ED90546BDB644A11D /* Debug */,
+				2919F1804625417DA20C19D9 /* Release */,
+				9CF328174BDC4E459D69DD26 /* MinSizeRel */,
+				55021187301D43DFBC53320F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A15DED4BBEA14952B62745D2 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00A91C114025439F85C8E25C /* Debug */,
+				5813A591BA1A43A5951A08B2 /* Release */,
+				0782C8916AD949628F742BC5 /* MinSizeRel */,
+				E947DF2483F14793B0D7455B /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0BF7FCC6CA6B4967B7A1E14F /* Project object */;
+}
