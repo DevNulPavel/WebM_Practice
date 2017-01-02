@@ -85,6 +85,44 @@ project(${PROJECT_NAME} C CXX)
 
 enable_testing()
 
+####################################################
+# Конфигурация библиотеки libvpx
+####################################################
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/libs/libvpx DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/libs)
+
+# Пути и зависимости
+set(LIBS_DEPENCY_NAMES ${LIBS_DEPENCY_NAMES} libvpx)
+set(LIBS_LINK_NAMES ${LIBS_LINK_NAMES} "${CMAKE_CURRENT_BINARY_DIR}/libs/libvpx/compileResult/lib/libvpx.a")
+
+# Определение платформы для оптимальной сборки
+set(LIBVPX_TARGET "generic-gnu")
+find_program(YASM_FOUND yasm)  # YASM assembler для кодека
+if(YASM_FOUND)
+    if (APPLE)
+        set(LIBVPX_TARGET "x86_64-darwin15-gcc")
+    elseif (UNIX AND NOT WIN32 AND NOT APPLE)
+        set(LIBVPX_TARGET "x86_64-linux-gcc")
+    elseif (MSYS)
+        set(LIBVPX_TARGET "x86_64-win64-gcc")
+    elseif (WIN32)
+        set(LIBVPX_TARGET "x86_64-linux-gcc")
+    endif()
+endif(YASM_FOUND)
+
+# Конфигурация кодека
+set(LIBVPX_CONFIGURE_PARAMS "--target=${LIBVPX_TARGET}" "--enable-pic" "--disable-install-docs" "--disable-install-bins" "--disable-unit-tests" "--disable-docs" "--disable-examples" "--prefix=${CMAKE_CURRENT_BINARY_DIR}/libs/libvpx/compileResult")
+include(ExternalProject)
+ExternalProject_Add(libvpx
+                    PREFIX "${CMAKE_CURRENT_BINARY_DIR}/libs/libvpx"
+                    SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/libs/libvpx"
+                    CONFIGURE_COMMAND "${CMAKE_CURRENT_BINARY_DIR}/libs/libvpx/configure" ${LIBVPX_CONFIGURE_PARAMS}
+                    INSTALL_DIR "${CMAKE_CURRENT_BINARY_DIR}/libs/libvpx/compileResult"
+                    BUILD_IN_SOURCE 1
+                    BUILD_COMMAND "make"
+                    INSTALL_COMMAND make install
+)
+include_directories(${CMAKE_CURRENT_BINARY_DIR}/libs/libvpx/compileResult/include)
+
 
 ####################################################
 # Библиотеки собираемые из исходников
