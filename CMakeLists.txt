@@ -32,6 +32,7 @@ set(LIBS_INCLUDE_FOLDERS
     glew/include
     libnestegg/include
     libyuv/include
+    libvpx
 	glm/glm
 	glfw/include
     glfw/deps

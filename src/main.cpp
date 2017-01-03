@@ -17,6 +17,7 @@
 #include "Helpers.h"
 #include "Shaders.h"
 #include "DrawManager.h"
+#include "WebMVideoDecoder.h"
 
 #define MATH_PI 3.14159265
 
@@ -224,7 +225,7 @@ int main(int argc, char *argv[]) {
         double frameDuration = drawManager->getFrameTime();
         double sleepTime = std::max(frameDuration - frameDrawTime, 0.0);
         if (sleepTime > 0) {
-            std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(sleepTime / 1000.0)));
+            std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(sleepTime * 1000.0)));
         }
     }
 

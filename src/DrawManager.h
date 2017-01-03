@@ -5,6 +5,7 @@
 #include <list>
 #include <vector>
 #include <glm.hpp>
+#include "WebMVideoDecoder.h"
 
 using namespace std;
 using namespace glm;
@@ -21,6 +22,9 @@ public:
     void draw();
 
 private:
+    // Decoder
+    WebMVideoDecoderPtr _decoder;
+    // OpenGL
     int _shaderProgram;
     uint _texture0Location;
     uint _matrixLocation;
@@ -30,7 +34,11 @@ private:
     uint _texture;
 
 private:
+    void createDecoder();
+    void createGLContext();
     void setSize(float width, float height);
+    void decodeNewFrame();
+    void drawTexture();
 };
 
 #endif

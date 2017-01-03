@@ -19,6 +19,26 @@ struct Vertex{
 ////////////////////////////////////////////////////////////////////////////////
 
 DrawManager::DrawManager(){
+    createDecoder();
+    createGLContext();
+}
+
+DrawManager::~DrawManager(){
+    // удаление текстуры
+    glDeleteTextures(1, &_texture);
+    glDeleteBuffers(1, &_vbo);
+    // удаление
+    glDeleteProgram(_shaderProgram);
+}
+
+void DrawManager::createDecoder(){
+    _decoder = make_shared<WebMVideoDecoder>("res/big-buck-bunny_trailer.webm");
+    
+    vec2 size = _decoder->getVideoDisplaySize();
+    setSize(size.x, size.y);
+}
+
+void DrawManager::createGLContext(){
     // Шейдеры
     map<string, int> attributesLocations;
     attributesLocations["aPos"] = UI_POS_ATTRIBUTE_LOCATION;
@@ -31,23 +51,30 @@ DrawManager::DrawManager(){
     _texture0Location = glGetUniformLocation(_shaderProgram, "uTexture0");
     CHECK_GL_ERRORS();
     
+    // размер текстуры
+    vec2 textureSize = _decoder->getVideoSize();
+    
     // создание текстуры
     glGenTextures(1, &_texture);
     glBindTexture(GL_TEXTURE_2D, _texture);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, textureSize.x, textureSize.y, 0, GL_RGBA, GL_UNSIGNED_BYTE, nullptr);
     glBindTexture(GL_TEXTURE_2D, 0);
     CHECK_GL_ERRORS();
+    
+    // отображаемый размер
+    vec2 displaySize = _decoder->getVideoDisplaySize();
     
     // Вершины
     vector<Vertex> vertexes;
     vertexes.reserve(4);
     
     // вбиваем данные о вершинах
-    vertexes.push_back(Vertex(vec2(0, _size.y),        vec2(0, 1)));
+    vertexes.push_back(Vertex(vec2(0, displaySize.y),        vec2(0, 1)));
     vertexes.push_back(Vertex(vec2(0, 0),              vec2(0, 0)));
-    vertexes.push_back(Vertex(vec2(_size.x, _size.y),  vec2(1, 1)));
-    vertexes.push_back(Vertex(vec2(_size.x, 0),        vec2(1, 0)));
+    vertexes.push_back(Vertex(vec2(displaySize.x, displaySize.y),  vec2(1, 1)));
+    vertexes.push_back(Vertex(vec2(displaySize.x, 0),        vec2(1, 0)));
     
     // VBO, данные о вершинах
     _vbo = 0;
@@ -56,14 +83,6 @@ DrawManager::DrawManager(){
     glBufferData (GL_ARRAY_BUFFER, 4 * sizeof(Vertex), (void*)(vertexes.data()), GL_STATIC_DRAW);
     glBindBuffer (GL_ARRAY_BUFFER, 0);
     CHECK_GL_ERRORS();
-}
-
-DrawManager::~DrawManager(){
-    // удаление текстуры
-    glDeleteTextures(1, &_texture);
-    glDeleteBuffers(1, &_vbo);
-    // удаление
-    glDeleteProgram(_shaderProgram);
 }
 
 vec2 DrawManager::getSize(){
@@ -77,17 +96,22 @@ void DrawManager::setSize(float width, float height){
 }
 
 float DrawManager::getFrameTime(){
-    return 0.0f;
+    return _decoder->getFrameDuration();
 }
 
-void DrawManager::draw(){
+void DrawManager::decodeNewFrame(){
+    _decoder->decodeNewFrame();
+    _decoder->copyDataToTexture(_texture);
+}
+
+void DrawManager::drawTexture(){
     glDisable(GL_DEPTH_TEST);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     
     // Включение шейдера
     glUseProgram (_shaderProgram);
-        
+    
     // выставляем матрицу трансформа в координаты камеры
     glUniformMatrix4fv(_matrixLocation, 1, false, glm::value_ptr(_projectionMatrix));
     
@@ -125,5 +149,10 @@ void DrawManager::draw(){
     
     glDisable(GL_BLEND);
     glUseProgram (0);
+}
+
+void DrawManager::draw(){
+    decodeNewFrame();
+    drawTexture();
 }
 
