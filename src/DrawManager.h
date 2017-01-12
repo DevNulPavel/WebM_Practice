@@ -19,7 +19,8 @@ public:
     ~DrawManager();
     float getFrameTime();
     vec2 getSize();
-    void draw();
+    void decodeNewFrame();
+    void drawTexture();
 
 private:
     // Decoder
@@ -37,8 +38,6 @@ private:
     void createDecoder();
     void createGLContext();
     void setSize(float width, float height);
-    void decodeNewFrame();
-    void drawTexture();
 };
 
 #endif

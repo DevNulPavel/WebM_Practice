@@ -151,8 +151,3 @@ void DrawManager::drawTexture(){
     glUseProgram (0);
 }
 
-void DrawManager::draw(){
-    decodeNewFrame();
-    drawTexture();
-}
-

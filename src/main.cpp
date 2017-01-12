@@ -211,19 +211,25 @@ int main(int argc, char *argv[]) {
         glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         // render
-        double frameDrawBegin = glfwGetTime();
+        double frameDuration = 0.0;
         if (drawManager) {
-            drawManager->draw();
+            drawManager->drawTexture();
+            frameDuration = drawManager->getFrameTime();
         }
-        double frameDrawEnd = glfwGetTime();
-        double frameDrawTime = frameDrawEnd - frameDrawBegin;
-
+        
         glfwSwapBuffers(window);
         glfwPollEvents();
         
+        // decode
+        double frameDecodeBegin = glfwGetTime();
+        if (drawManager) {
+            drawManager->decodeNewFrame();
+        }
+        double frameDecodeEnd = glfwGetTime();
+        double frameDecodeTime = frameDecodeEnd - frameDecodeBegin;
+        
         // время отображения текущего кадра
-        double frameDuration = drawManager->getFrameTime();
-        double sleepTime = std::max(frameDuration - frameDrawTime, 0.0);
+        double sleepTime = std::max(frameDuration - frameDecodeTime, 0.0);
         if (sleepTime > 0) {
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(sleepTime * 1000.0)));
         }
