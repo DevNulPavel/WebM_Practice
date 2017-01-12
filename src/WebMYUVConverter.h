@@ -1,9 +1,11 @@
 #ifndef VIDEO_DECODER_COLOR_CONVERTER
 #define VIDEO_DECODER_COLOR_CONVERTER
 
-
 namespace xgen {
 namespace video {
+
+typedef unsigned int uint;
+typedef unsigned char uint8_t;
 
 void yuv420ToRGBA(uint width, uint height,
                          const uint8_t* y, const uint8_t* u, const uint8_t* v,
