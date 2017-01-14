@@ -91,9 +91,14 @@ enable_testing()
 ####################################################
 # Определение платформы для оптимальной сборки
 if(APPLE)
+    include_directories("${CMAKE_CURRENT_SOURCE_DIR}/libs/libvpx_static/OSX/include")
+    set(LIBS_LINK_NAMES ${LIBS_LINK_NAMES} "${CMAKE_CURRENT_SOURCE_DIR}/libs/libvpx_static/OSX/lib/libvpx.a")
 elseif(UNIX AND NOT WIN32 AND NOT APPLE)
     include_directories("${CMAKE_CURRENT_SOURCE_DIR}/libs/libvpx_static/Linux-x64/include")
     set(LIBS_LINK_NAMES ${LIBS_LINK_NAMES} "${CMAKE_CURRENT_SOURCE_DIR}/libs/libvpx_static/Linux-x64/lib/libvpx.a")
+elseif(WIN32 OR MSYS)
+    include_directories("${CMAKE_CURRENT_SOURCE_DIR}/libs/libvpx_static/Windows-x64/include")
+    set(LIBS_LINK_NAMES ${LIBS_LINK_NAMES} "${CMAKE_CURRENT_SOURCE_DIR}/libs/libvpx_static/Windows-x64/lib/libvpx.a")
 else()
     file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/libs/libvpx" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/libs")
 
