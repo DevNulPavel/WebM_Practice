@@ -1,6 +1,11 @@
 #include "DrawManager.h"
+#define GLFW_INCLUDE_GLU
+#define GLFW_INCLUDE_GL3
+#define GLFW_INCLUDE_GLEXT
 #include <gtc/type_ptr.hpp>
 #include <gtc/matrix_transform.hpp>
+#include <GL/glew.h>        // для поддержки расширений, шейдеров и так далее
+#include <GLFW/glfw3.h>     // Непосредственно сам GLFW
 #include "Shaders.h"
 #include "Helpers.h"
 
@@ -32,7 +37,12 @@ DrawManager::~DrawManager(){
 }
 
 void DrawManager::createDecoder(){
-    _decoder = make_shared<WebMVideoDecoder>("res/big-buck-bunny_trailer.webm");
+#ifdef _WIN32
+    std::string filePath = "C:\\WebM_Practice-master\\res\\big-buck-bunny_trailer.webm";
+#else
+    std::string filePath = "res/big-buck-bunny_trailer.webm";
+#endif
+    _decoder = make_shared<WebMVideoDecoder>(filePath);
     
     vec2 size = _decoder->getVideoDisplaySize();
     setSize(size.x, size.y);

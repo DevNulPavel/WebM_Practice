@@ -29,7 +29,9 @@ int decoderRead(void* buffer, size_t size, void* context) {
     // success = 1
     // eof = 0
     // error = -1
-    return f->gcount() == size ? 1 : f->eof() ? 0 : -1;
+    size_t currentCount = f->gcount();
+    bool endOfFile = f->eof();
+    return (currentCount == size) ? 1 : (endOfFile ? 0 : -1);
 }
 
 // смещаемся по потоку
@@ -159,8 +161,17 @@ int WebMVideoDecoder::loadDataStream(){
         return -1;
     }
 
-    _stream = make_shared<std::ifstream>(_filePath);
-    return 0;
+    _stream = make_shared<std::ifstream>(_filePath, std::ifstream::in | std::ifstream::binary);
+    _stream->sync();
+    bool opened = _stream->is_open();
+
+    // get length of file:
+    _stream->seekg (0, _stream->end);
+    size_t length = _stream->tellg();
+    _stream->seekg (0, _stream->beg);
+    printf("Video file length = %d\n", length);
+
+    return (opened == true) ? 0 : -1;
 }
 
 int WebMVideoDecoder::initializeWebMContainer(){

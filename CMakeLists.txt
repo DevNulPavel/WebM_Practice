@@ -2,39 +2,35 @@ set(PROJECT_NAME "WebM_Practice")
 set(EXECUTABLE_NAME "WebM_Player")
 # Пути к исходникам
 set(SRC_FOLDERS
-	src
+    src
 )
 # Конфиги используемых библиотек
 set(LIBS_FOLDER 
     libs/
 )
 set(LIBS_FOLDERS
-    glew
     libyuv
-	glm
-	glfw
+    glm
+    glfw
     libnestegg
 )
 set(LIBS_LINK_NAMES
-    libglew
     libnestegg
     libyuv
-	glfw
+    glfw
 )
 set(LIBS_DEPENCY_NAMES
-    libglew
     libnestegg
     libyuv
-	glfw
-	glm
+    glfw
+    glm
 )
 set(LIBS_INCLUDE_FOLDERS
-    glew/include
     libnestegg/include
     libyuv/include
     libvpx
-	glm/glm
-	glfw/include
+    glm/glm
+    glfw/include
     glfw/deps
 )
 
@@ -56,8 +52,8 @@ include("CMake/Helpers.cmake")
 
 # Если у нас есть компилятор clang на юникс - используем его
 if (UNIX)
-	message("********* Unix compilation check *********")
-	 # Используем ccache (если есть) для ускорения сборки
+    message("********* Unix compilation check *********")
+    # Используем ccache (если есть) для ускорения сборки
     find_program(CCACHE_FOUND ccache)
     if(CCACHE_FOUND)
         message("-> ССache will used for compilation")
@@ -66,25 +62,45 @@ if (UNIX)
     endif(CCACHE_FOUND)
 
     # Вариант с путями
-	# execute_process(COMMAND which clang OUTPUT_VARIABLE CLANG_PATH)
-	# execute_process(COMMAND which clang++ OUTPUT_VARIABLE CLANGXX_PATH)
-	# if(NOT ("${CLANG_PATH}" STREQUAL ""))
-	find_program(CLANG_FOUND clang)
-	if(CLANG_FOUND)
-		message("-> Clang will used for compilation")
-		set(CMAKE_C_COMPILER "clang")
-		set(CMAKE_CXX_COMPILER "clang++")
-		# Скрываем ворнинги на clang + цвета
-		set(CUSTOM_COMPILER_C_FLAGS "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics")
-		set(CUSTOM_COMPILER_CXX_FLAGS "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics")
-	endif(CLANG_FOUND)
-	message("**********************************")
+    # execute_process(COMMAND which clang OUTPUT_VARIABLE CLANG_PATH)
+    # execute_process(COMMAND which clang++ OUTPUT_VARIABLE CLANGXX_PATH)
+    # if(NOT ("${CLANG_PATH}" STREQUAL ""))
+    find_program(CLANG_FOUND clang)
+    if(CLANG_FOUND)
+        message("-> Clang will used for compilation")
+        set(CMAKE_C_COMPILER "clang")
+        set(CMAKE_CXX_COMPILER "clang++")
+        # Скрываем ворнинги на clang + цвета
+        set(CUSTOM_COMPILER_C_FLAGS "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics")
+        set(CUSTOM_COMPILER_CXX_FLAGS "-Wno-error=unused-command-line-argument -Qunused-arguments -fcolor-diagnostics")
+    endif(CLANG_FOUND)
+    message("**********************************")
 endif()
 
 # Инициализация проекта
 project(${PROJECT_NAME} C CXX)
 
 enable_testing()
+
+####################################################
+# Библиотека GLEW REQUIRED
+####################################################
+find_package(GLEW)
+if(NOT GLEW_FOUND)   # если не нашли, то добавляем из исходников
+    message("GLEW lib not found, build from sources")
+    set (CMAKE_C_FLAGS "${CUSTOM_COMPILER_C_FLAGS}")
+    set (CMAKE_CXX_FLAGS "${CUSTOM_COMPILER_CXX_FLAGS}")
+    add_subdirectory(${LIBS_FOLDER}/glew)
+    set(LIBS_DEPENCY_NAMES ${LIBS_DEPENCY_NAMES} libglew)	# То, что указывается в project
+    include_directories(${LIBS_FOLDER}/glew/include)
+    set(LIBS_LINK_FOLDERS "${LIBS_LINK_FOLDERS} ${CMAKE_BINARY_DIR}/lib")
+    message("CMAKE GLEW FOLDER = ${CMAKE_BINARY_DIR}/lib")
+    set(LIBS_LINK_NAMES ${LIBS_LINK_NAMES} libglew)		# то, что указывается в add_library
+    add_definitions(-DGLEW_STATIC)
+else()
+    include_directories(${GLEW_INCLUDE_DIRS})
+    set(LIBS_LINK_NAMES ${LIBS_LINK_NAMES} ${GLEW_LIBRARIES})
+endif()
 
 ####################################################
 # Конфигурация библиотеки libvpx
@@ -96,9 +112,6 @@ if(APPLE)
 elseif(UNIX AND NOT WIN32 AND NOT APPLE)
     include_directories("${CMAKE_CURRENT_SOURCE_DIR}/libs/libvpx_static/Linux-x64/include")
     set(LIBS_LINK_NAMES ${LIBS_LINK_NAMES} "${CMAKE_CURRENT_SOURCE_DIR}/libs/libvpx_static/Linux-x64/lib/libvpx.a")
-elseif(WIN32 OR MSYS)
-    include_directories("${CMAKE_CURRENT_SOURCE_DIR}/libs/libvpx_static/Windows-x64/include")
-    set(LIBS_LINK_NAMES ${LIBS_LINK_NAMES} "${CMAKE_CURRENT_SOURCE_DIR}/libs/libvpx_static/Windows-x64/lib/libvpx.a")
 else()
     add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/libs/libvpx_src/Sources" "${CMAKE_BINARY_DIR}/libvpx")
     include_directories ("${CMAKE_CURRENT_SOURCE_DIR}/libs/libvpx_src/Sources" "${CMAKE_CURRENT_SOURCE_DIR}/libs/libvpx_src/SourcesConfigureFiles")
@@ -194,24 +207,23 @@ endif ()
 
 # Не кастомные флаги компиляции
 if(APPLE)
-	# TODO: пробросить линковку
-	set (PROJECT_LINK_FLAGS "-stdlib=libc++")
-	set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -Wall -g")
-	set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -Wall -g -stdlib=libc++")
-endif ()
-if (UNIX)
-	set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${CUSTOM_COMPILER_C_FLAGS} -O0 -Wall -g -std=c++11")
-  	set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${CUSTOM_COMPILER_CXX_FLAGS} -O0 -Wall -g -std=c++11")
-endif ()
-if (MSYS)
-	# микрософту не нужен флаг -std=c++11
-	set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /O0 /g /Wall")
-	set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /O0 /g /Wall")
-endif ()
-if (WIN32)
-    # микрософту не нужен флаг -std=c++11
+    # TODO: пробросить линковку
+    set (PROJECT_LINK_FLAGS "-stdlib=libc++")
     set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -Wall -g")
     set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -Wall -g -stdlib=libc++")
+endif ()
+if (UNIX)
+    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${CUSTOM_COMPILER_C_FLAGS} -O0 -Wall -g -std=c++11")
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${CUSTOM_COMPILER_CXX_FLAGS} -O0 -Wall -g -std=c++11")
+endif ()
+if (MSYS)
+    # микрософту не нужен флаг -std=c++11
+    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /O0 /g /Wall")
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /O0 /g /Wall")
+endif ()
+if (WIN32)
+    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -Wall -g")
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -Wall -g -std=c++11")
 endif ()
 
 # Вывод информации о настройке копиляции (Функция в CMake/Helpers.cmake)
