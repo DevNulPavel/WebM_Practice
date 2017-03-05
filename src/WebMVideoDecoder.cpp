@@ -445,10 +445,10 @@ void WebMVideoDecoder::decodeNewFrame(){
                     uint width = img->d_w;
                     uint height = img->d_h;
                     
-                    u_char* planeY = img->planes[VPX_PLANE_Y];
-                    u_char* planeU = img->planes[VPX_PLANE_U];
-                    u_char* planeV = img->planes[VPX_PLANE_V];
-                    u_char* planeAlpha = alphaImg->planes[VPX_PLANE_Y];
+                    unsigned char* planeY = img->planes[VPX_PLANE_Y];
+                    unsigned char* planeU = img->planes[VPX_PLANE_U];
+                    unsigned char* planeV = img->planes[VPX_PLANE_V];
+                    unsigned char* planeAlpha = alphaImg->planes[VPX_PLANE_Y];
                     
                     uint strideY = static_cast<uint>(img->stride[VPX_PLANE_Y]);
                     uint strideU = static_cast<uint>(img->stride[VPX_PLANE_U]);
@@ -473,9 +473,9 @@ void WebMVideoDecoder::decodeNewFrame(){
                     uint width = img->d_w;
                     uint height = img->d_h;
                     
-                    u_char* planeY = img->planes[VPX_PLANE_Y];
-                    u_char* planeU = img->planes[VPX_PLANE_U];
-                    u_char* planeV = img->planes[VPX_PLANE_V];
+                    unsigned char* planeY = img->planes[VPX_PLANE_Y];
+                    unsigned char* planeU = img->planes[VPX_PLANE_U];
+                    unsigned char* planeV = img->planes[VPX_PLANE_V];
                     
                     uint strideY = static_cast<uint>(img->stride[VPX_PLANE_Y]);
                     uint strideU = static_cast<uint>(img->stride[VPX_PLANE_U]);
