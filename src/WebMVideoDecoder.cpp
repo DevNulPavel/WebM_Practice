@@ -398,48 +398,21 @@ void WebMVideoDecoder::decodeNewFrame(){
             assert(r == 0);
             
             // получаем длительность текущего отображения кадра
-            frameDurationNanoSec = 0;
-            nestegg_packet_duration(packet, &frameDurationNanoSec);
-            if (frameDurationNanoSec == 0) {
-                _decodedFrameDurationSec = 0;
-            }else{
-                _decodedFrameDurationSec = static_cast<double>(frameDurationNanoSec) / 1000.0 / 1000.0 / 1000.0;
-            }
             
             for (uint j = 0; j < packetsCount; ++j) { // for (int j=0; j < 1; ++j) { // проверка проигрывания одного кадра
                 // чтение
-                unsigned char* data = NULL;    // нету смысла тратить такты на обнуление?? (= NULL)
-                size_t length = 0;             // сколько данных получено
-                r = nestegg_packet_data(packet, j, &data, &length);
-                assert(r == 0);
+                // CODE HERE!!!
                 
                 // чтение альфы
-                unsigned char* additionalData = NULL;    // нету смысла тратить такты на обнуление?? (= NULL)
-                size_t additionalLength = 0;             // сколько данных получено
-                if (_withAlpha) {
-                    // у VP8 альфа находится на 1
-                    const uint alphaTrackId = 1;
-                    r = nestegg_packet_additional_data(packet, alphaTrackId, &additionalData, &additionalLength);
-                    assert(r == 0);
-                }
+                // CODE HERE!!!
                 
                 // Выполнение декодирования кадра
-                vpx_codec_err_t e = vpx_codec_decode(&_normalCodec, data, static_cast<uint>(length), NULL, 0);
-                if (e) {
-                    // статус - ошибка декодирования
-                    setStatus(WebMDecodeStatus::DECODE_ERROR);
-                    return;
-                }
+                // CODE HERE!!!
                 
                 // Если есть альфа, то декодим альфу
                 if (_withAlpha) {
                     // Выполнение декодирования альфы кадра
-                    vpx_codec_err_t alphaDecodeError = vpx_codec_decode(&_alphaCodec, additionalData, static_cast<uint>(additionalLength), NULL, 0);
-                    if (alphaDecodeError) {
-                        // статус - ошибка декодирования
-                        setStatus(WebMDecodeStatus::DECODE_ERROR);
-                        return;
-                    }
+                    // CODE HERE!!!
                 }
             }
             speedtest_end(DECODE);
@@ -447,64 +420,11 @@ void WebMVideoDecoder::decodeNewFrame(){
             // чтение
             speedtest_begin(CONVERT);
             if (_withAlpha) {
-                // чтение
-                vpx_codec_iter_t iter = NULL;
-                vpx_image_t* img = NULL;
-                vpx_codec_iter_t alphaIter = NULL;
-                vpx_image_t* alphaImg = NULL;
-                while((img = vpx_codec_get_frame(&_normalCodec, &iter)) && (alphaImg = vpx_codec_get_frame(&_alphaCodec, &alphaIter))) {
-                    uint width = img->d_w;
-                    uint height = img->d_h;
-                    
-                    unsigned char* planeY = img->planes[VPX_PLANE_Y];
-                    unsigned char* planeU = img->planes[VPX_PLANE_U];
-                    unsigned char* planeV = img->planes[VPX_PLANE_V];
-                    unsigned char* planeAlpha = alphaImg->planes[VPX_PLANE_Y];
-                    
-                    uint strideY = static_cast<uint>(img->stride[VPX_PLANE_Y]);
-                    uint strideU = static_cast<uint>(img->stride[VPX_PLANE_U]);
-                    uint strideV = static_cast<uint>(img->stride[VPX_PLANE_V]);
-                    uint strideAlpha = static_cast<uint>(alphaImg->stride[VPX_PLANE_Y]);
-                    
-                    // не понимаю почему надо использовать ABGR, возможно с обратным порядком формата???
-                    libyuv::I420AlphaToABGR(planeY, static_cast<int>(strideY),
-                                            planeU, static_cast<int>(strideU),
-                                            planeV, static_cast<int>(strideV),
-                                            planeAlpha, static_cast<int>(strideAlpha),
-                                            _decodedBuffer, static_cast<int>(width*_bufferStride),
-                                            static_cast<int>(width), -static_cast<int>(height), 0);
-                    
-                    // чтобы выполнилось лишь один раз
-                    break;
-                }
+                // чтение с альфой
+                // CODE HERE!!!
             } else{
-                vpx_codec_iter_t iter = NULL;
-                vpx_image_t* img = NULL;
-                while((img = vpx_codec_get_frame(&_normalCodec, &iter))) {
-                    uint width = img->d_w;
-                    uint height = img->d_h;
-                    
-                    unsigned char* planeY = img->planes[VPX_PLANE_Y];
-                    unsigned char* planeU = img->planes[VPX_PLANE_U];
-                    unsigned char* planeV = img->planes[VPX_PLANE_V];
-                    
-                    uint strideY = static_cast<uint>(img->stride[VPX_PLANE_Y]);
-                    uint strideU = static_cast<uint>(img->stride[VPX_PLANE_U]);
-                    uint strideV = static_cast<uint>(img->stride[VPX_PLANE_V]);
-                    
-                    // не понимаю почему надо использовать ABGR, возможно с обратным порядком формата???
-                    libyuv::I420ToABGR(planeY, static_cast<int>(strideY),
-                                       planeU, static_cast<int>(strideU),
-                                       planeV, static_cast<int>(strideV),
-                                       _decodedBuffer, static_cast<int>(width*_bufferStride),
-                                       static_cast<int>(width), -static_cast<int>(height));
-                    // alpha inside
-                    /*if ((videoCodec == NESTEGG_CODEC_VP9) && (img->fmt & VPX_IMG_FMT_HAS_ALPHA)){
-                     }*/
-                    
-                    // чтобы выполнилось лишь один раз
-                    break;
-                }
+                // чтение без альфы
+                // CODE HERE!!!
             }
             speedtest_end(CONVERT);
             
@@ -551,10 +471,7 @@ void WebMVideoDecoder::copyDataToTexture(uint textureid){
     
     // выводим в текстуру
     if (_decodedBuffer) {
-        vec2 textureSize = getVideoSize();
-        glBindTexture(GL_TEXTURE_2D, textureid);
-        glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, textureSize.x, textureSize.y, GL_RGBA, GL_UNSIGNED_BYTE, _decodedBuffer);
-        glBindTexture(GL_TEXTURE_2D, 0);
+        // CODE HERE!!!
     }
     
     // обнуляем дельту для поддержки фпс
