@@ -246,7 +246,7 @@ int WebMVideoDecoder::initializeWebMContainer(){
                    "duration: %lldnSec, timestampScale: %lldnSec, "
                    "size: %dx%d, "
                    "display size: %dx%d "
-                   "Alpha: %s",
+                   "Alpha: %s\n",
                    i, _videoCodecType, type, static_cast<int>(1.0 / _defaultFrameDurationSec),
                    _videoDuration, _timeStampScale,
                    _nestegVideoParams.width, _nestegVideoParams.height,
@@ -322,7 +322,7 @@ int WebMVideoDecoder::initializeCodec(){
     speedtest_end(MALLOC_TIME);
     
     // Информация о кодеке
-    printf("WebM decoder for file \"%s\": %s", _filePath.c_str(), vpx_codec_iface_name(_vpxInterface));
+    printf("WebM decoder for file \"%s\": %s\n", _filePath.c_str(), vpx_codec_iface_name(_vpxInterface));
     
     return 0;
 }
@@ -347,6 +347,27 @@ void WebMVideoDecoder::decodeNewFrame(){
 
     nestegg_packet* packet = nullptr;
     while (!decodingComplete) {
+        static bool moved = false;
+    
+        // переход к тестовой позиции
+        if (moved == false) {
+            unsigned int cluster_num = 1;
+            int64_t max_offset = 1000;
+            int64_t start_pos = 0;
+            int64_t end_pos = 0;
+            uint64_t tstamp = 0;
+            int error = nestegg_get_cue_point(_nesteg, cluster_num,
+                                              max_offset, &start_pos,
+                                              &end_pos, &tstamp);
+        
+            for (uint i = 0; i < _tracksCount; ++i){
+                error = nestegg_track_seek(_nesteg, i, uint64(_videoDuration * 0.6));
+                printf("Move error: %d\n", error);
+            }
+
+            moved = true;
+        }
+    
         speedtest_begin(READ);
         int r = 0;
         // читаем пакет пока не прочитается
@@ -371,6 +392,7 @@ void WebMVideoDecoder::decodeNewFrame(){
             }
             continue;
         }
+        
         // выход при ошибке
         if (r <= 0){
             if(packet){
