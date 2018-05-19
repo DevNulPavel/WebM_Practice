@@ -9,6 +9,7 @@ int checkOpenGLerror(const char* file, int line) {
     glErr = glGetError();
     if (glErr != GL_NO_ERROR) {
         cout << "OpenGL Error in file " << file << " at " << line << ": " << gluErrorString(glErr) << endl;
+        cout.flush();
         retCode = 1;
     }
     return retCode;
@@ -54,4 +55,5 @@ void glDebugOut(uint source, uint type, uint id, uint severity, int length, cons
         break;
     }
     cout << endl << endl;
+    cout.flush();
 }

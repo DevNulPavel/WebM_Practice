@@ -32,6 +32,7 @@ private:
     mat4 _projectionMatrix;
     vec2 _size;
     uint32_t _vbo;
+    uint32_t _vao;
     uint32_t _texture;
 
 private:
