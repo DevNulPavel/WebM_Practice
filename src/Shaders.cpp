@@ -40,6 +40,8 @@ GLuint createShaderFromSources(const char* vertexShader, const char* fragmentSha
 GLuint create2DShader(const map<string,int>& attributeLocations){
     // Шейдер вершин
     const char* vertexShader = STRINGIFY_SHADER(
+        //#version 200
+
         // vertex attribute
         attribute vec2 aPos;
         attribute vec2 aTexCoord;
@@ -57,6 +59,8 @@ GLuint create2DShader(const map<string,int>& attributeLocations){
         }
     );
     const char* fragmentShader = STRINGIFY_SHADER(
+        //#version 200
+
         // переменная текстурных координат
         varying vec2 vTexCoord;
 

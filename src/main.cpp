@@ -143,8 +143,13 @@ GLFWwindow* createWindow(){
     // создание окна
     // glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     // glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_COMPAT_PROFILE);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 2);
+
+    //glfwWindowHint(GLFW_CLIENT_API, GLFW_OPENGL_ES_API);
+    //glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
+    //glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
     glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GL_TRUE);
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
     window = glfwCreateWindow(1, 1, "Simple example", NULL, NULL);
@@ -163,7 +168,7 @@ GLFWwindow* createWindow(){
     glfwSetScrollCallback(window, glfwScrollCallback);
     
     // инициализация расширений
-    glewExperimental = GL_TRUE;
+    //glewExperimental = GL_TRUE;
     glewInit();
     
     // Инициализация отладки

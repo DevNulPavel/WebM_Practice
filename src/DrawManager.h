@@ -27,12 +27,12 @@ private:
     WebMVideoDecoderPtr _decoder;
     // OpenGL
     int _shaderProgram;
-    uint _texture0Location;
-    uint _matrixLocation;
+    int32_t _texture0Location;
+    int32_t _matrixLocation;
     mat4 _projectionMatrix;
     vec2 _size;
-    uint _vbo;
-    uint _texture;
+    uint32_t _vbo;
+    uint32_t _texture;
 
 private:
     void createDecoder();
