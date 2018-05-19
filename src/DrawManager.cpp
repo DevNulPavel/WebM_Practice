@@ -38,7 +38,7 @@ DrawManager::~DrawManager(){
 
 void DrawManager::createDecoder(){
 #ifdef _WIN32
-    std::string filePath = "C:\\WebM_Practice-master\\res\\big-buck-bunny_trailer.webm";
+    std::string filePath = "res\\big-buck-bunny_trailer.webm";
 #else
     std::string filePath = "res/big-buck-bunny_trailer.webm";
 #endif
