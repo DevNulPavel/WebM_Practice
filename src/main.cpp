@@ -141,8 +141,10 @@ GLFWwindow* createWindow(){
     }
     
     // создание окна
-    // glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_COMPAT_PROFILE);
+    //glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    //glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_COMPAT_PROFILE);
+    //glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_ANY_PROFILE);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 2);
     glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GL_TRUE);
@@ -163,9 +165,14 @@ GLFWwindow* createWindow(){
     glfwSetScrollCallback(window, glfwScrollCallback);
     
     // инициализация расширений
-    //glewExperimental = GL_TRUE;
-    glewInit();
+    glewExperimental = GL_TRUE;
+    if(glewInit() != 0){
+        printf("GLEW init failed");
+        exit(-2);
+    }
     
+    CHECK_GL_ERRORS();
+
     // Инициализация отладки
     if(glDebugMessageCallback){
         glEnable(GL_DEBUG_OUTPUT);
@@ -181,6 +188,9 @@ GLFWwindow* createWindow(){
     
     const unsigned char* version = glGetString(GL_VERSION);
     printf("OpenGL version = %s\n", version);
+    fflush(stdout);
+
+    CHECK_GL_ERRORS();
     
     return window;
 }

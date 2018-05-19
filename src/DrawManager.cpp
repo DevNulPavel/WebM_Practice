@@ -23,12 +23,22 @@ struct Vertex{
 
 ////////////////////////////////////////////////////////////////////////////////
 
-DrawManager::DrawManager(){
+DrawManager::DrawManager():
+    _shaderProgram(0),
+    _texture0Location(0),
+    _matrixLocation(0),
+    _projectionMatrix(0),
+    _size(0),
+    _vbo(0),
+    _vao(0),
+    _texture(0){
+
     createDecoder();
     createGLContext();
 }
 
 DrawManager::~DrawManager(){
+    glDeleteVertexArrays(1, &_vao);
     // удаление текстуры
     glDeleteTextures(1, &_texture);
     glDeleteBuffers(1, &_vbo);
@@ -87,11 +97,29 @@ void DrawManager::createGLContext(){
     vertexes.push_back(Vertex(vec2(displaySize.x, 0),        vec2(1, 0)));
     
     // VBO, данные о вершинах
-    _vbo = 0;
     glGenBuffers (1, &_vbo);
     glBindBuffer (GL_ARRAY_BUFFER, _vbo);
     glBufferData (GL_ARRAY_BUFFER, 4 * sizeof(Vertex), (void*)(vertexes.data()), GL_STATIC_DRAW);
     glBindBuffer (GL_ARRAY_BUFFER, 0);
+    CHECK_GL_ERRORS();
+
+    // VAO
+    glGenVertexArrays(1, &_vao);
+
+    // Bind VAO
+    glBindVertexArray(_vao);
+
+    // Bind VBO
+    glBindBuffer(GL_ARRAY_BUFFER, _vbo);
+    CHECK_GL_ERRORS();
+
+    // VBO align
+    glVertexAttribPointer(UI_POS_ATTRIBUTE_LOCATION, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), OFFSETOF(Vertex, pos)); // Позиции
+    glVertexAttribPointer(UI_TEX_COORD_ATTRIBUTE_LOCATION, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), OFFSETOF(Vertex, texCoord));    // Текстурные координаты
+    CHECK_GL_ERRORS();
+
+    // Unbind VAO
+    glBindVertexArray(0);
     CHECK_GL_ERRORS();
 }
 
@@ -118,9 +146,11 @@ void DrawManager::drawTexture(){
     glDisable(GL_DEPTH_TEST);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    CHECK_GL_ERRORS();
     
     // Включение шейдера
     glUseProgram (_shaderProgram);
+    CHECK_GL_ERRORS();
     
     // выставляем матрицу трансформа в координаты камеры
     glUniformMatrix4fv(_matrixLocation, 1, false, glm::value_ptr(_projectionMatrix));
@@ -131,25 +161,19 @@ void DrawManager::drawTexture(){
     // активируем нулевую текстуру для для шейдера, включаем эту текстуру
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, _texture);
-    
-    // рисуем
-    //      sizeof(Vertex) - размер блока одной информации о вершине
-    //      OFFSETOF(Vertex, color) - смещение от начала
-    glBindBuffer(GL_ARRAY_BUFFER, _vbo);
     CHECK_GL_ERRORS();
+    
+    // Bind VAO
+    glBindVertexArray(_vao);
     
     // VBO enable arrays
     glEnableVertexAttribArray(UI_POS_ATTRIBUTE_LOCATION);
     glEnableVertexAttribArray(UI_TEX_COORD_ATTRIBUTE_LOCATION);
     CHECK_GL_ERRORS();
-    
-    // VBO align
-    glVertexAttribPointer(UI_POS_ATTRIBUTE_LOCATION, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), OFFSETOF(Vertex, pos)); // Позиции
-    glVertexAttribPointer(UI_TEX_COORD_ATTRIBUTE_LOCATION, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), OFFSETOF(Vertex, texCoord));    // Текстурные координаты
-    CHECK_GL_ERRORS();
-    
+
     // draw
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+    CHECK_GL_ERRORS();
     
     // VBO off
     glDisableVertexAttribArray(UI_POS_ATTRIBUTE_LOCATION);

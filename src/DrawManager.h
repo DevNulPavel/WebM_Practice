@@ -31,8 +31,9 @@ private:
     uint _matrixLocation;
     mat4 _projectionMatrix;
     vec2 _size;
-    uint _vbo;
-    uint _texture;
+    uint32_t _vbo;
+    uint32_t _vao;
+    uint32_t _texture;
 
 private:
     void createDecoder();
