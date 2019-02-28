@@ -12,7 +12,7 @@ endif()
 
 set(CMAKE_DEBUG_POSTFIX d)
 
-option (BUILD_UTILS "utilities" OFF)
+option (BUILD_UTILS "utilities" ON)
 
 set (GLEW_DIR .)
 

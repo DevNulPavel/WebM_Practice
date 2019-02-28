@@ -7,7 +7,7 @@
 // вычисление смещения в структуре/классе
 #define OFFSETOF(TYPE, FIELD) ((void*)&(((TYPE*)NULL)->FIELD))
 // Превращаем текущий текст в строку шейдера
-#define STRINGIFY_SHADER(TEXT) ("#version 150\n "#TEXT)
+#define STRINGIFY_SHADER(TEXT) ("#version 120\n "#TEXT)
 // проверка ошибок
 #define CHECK_GL_ERRORS() checkOpenGLerror(__FILE__, __LINE__)
 

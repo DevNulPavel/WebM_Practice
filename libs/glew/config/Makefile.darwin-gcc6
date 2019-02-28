@@ -1,14 +1,15 @@
-# Note: Mac PPC is obsolete but the configuration
-#       is here for reference.
+# For building with Brew gcc:
+# $ brew install gcc
 GLEW_DEST = /usr/local
 NAME = $(GLEW_NAME)
-CC = cc
-LD = cc
-CFLAGS.EXTRA += -arch ppc
+CC = gcc-6
+LD = gcc-6
 CFLAGS.EXTRA += -dynamic -fno-common
-CFLAGS.EXTRA += -pedantic
 CFLAGS.EXTRA += -fPIC
-LDFLAGS.EXTRA = -arch ppc
+# Lots of warnings with -pedantic
+# warning: ISO C forbids conversion of object pointer to function pointer type
+#CFLAGS.EXTRA += -pedantic
+LDFLAGS.EXTRA =
 ifneq (undefined, $(origin GLEW_APPLE_GLX))
 CFLAGS.EXTRA += -std=c99
 CFLAGS.EXTRA += -I/usr/X11R6/include -D'GLEW_APPLE_GLX'

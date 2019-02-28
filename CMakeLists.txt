@@ -56,7 +56,7 @@ if (UNIX)
     # Используем ccache (если есть) для ускорения сборки
     find_program(CCACHE_FOUND ccache)
     if(CCACHE_FOUND)
-        message("-> ССache will used for compilation")
+        message("-> ССache will be used for compilation")
         set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE ccache)
         set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK ccache)
     endif(CCACHE_FOUND)
@@ -67,7 +67,7 @@ if (UNIX)
     # if(NOT ("${CLANG_PATH}" STREQUAL ""))
     find_program(CLANG_FOUND clang)
     if(CLANG_FOUND)
-        message("-> Clang will used for compilation")
+        message("-> Clang will be used for compilation")
         set(CMAKE_C_COMPILER "clang")
         set(CMAKE_CXX_COMPILER "clang++")
         # Скрываем ворнинги на clang + цвета
@@ -85,7 +85,7 @@ enable_testing()
 ####################################################
 # Библиотека GLEW REQUIRED
 ####################################################
-find_package(GLEW)
+# find_package(GLEW)
 if(NOT GLEW_FOUND)   # если не нашли, то добавляем из исходников
     message("GLEW lib not found, build from sources")
     set (CMAKE_C_FLAGS "${CUSTOM_COMPILER_C_FLAGS}")
