@@ -30,7 +30,6 @@ DrawManager::DrawManager():
     _projectionMatrix(0),
     _size(0),
     _vbo(0),
-    _vao(0),
     _texture(0){
 
     createDecoder();
@@ -38,10 +37,10 @@ DrawManager::DrawManager():
 }
 
 DrawManager::~DrawManager(){
-    glDeleteVertexArrays(1, &_vao);
+    // Delete VBO
+    glDeleteBuffers(1, &_vbo);
     // удаление текстуры
     glDeleteTextures(1, &_texture);
-    glDeleteBuffers(1, &_vbo);
     // удаление
     glDeleteProgram(_shaderProgram);
 }
@@ -103,12 +102,6 @@ void DrawManager::createGLContext(){
     glBindBuffer (GL_ARRAY_BUFFER, 0);
     CHECK_GL_ERRORS();
 
-    // VAO
-    glGenVertexArrays(1, &_vao);
-
-    // Bind VAO
-    glBindVertexArray(_vao);
-
     // Bind VBO
     glBindBuffer(GL_ARRAY_BUFFER, _vbo);
     CHECK_GL_ERRORS();
@@ -118,8 +111,8 @@ void DrawManager::createGLContext(){
     glVertexAttribPointer(UI_TEX_COORD_ATTRIBUTE_LOCATION, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), OFFSETOF(Vertex, texCoord));    // Текстурные координаты
     CHECK_GL_ERRORS();
 
-    // Unbind VAO
-    glBindVertexArray(0);
+    // Unbind VBO
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
     CHECK_GL_ERRORS();
 }
 
@@ -163,14 +156,20 @@ void DrawManager::drawTexture(){
     glBindTexture(GL_TEXTURE_2D, _texture);
     CHECK_GL_ERRORS();
     
-    // Bind VAO
-    glBindVertexArray(_vao);
-    
     // VBO enable arrays
     glEnableVertexAttribArray(UI_POS_ATTRIBUTE_LOCATION);
     glEnableVertexAttribArray(UI_TEX_COORD_ATTRIBUTE_LOCATION);
     CHECK_GL_ERRORS();
 
+    // Bind VBO
+    glBindBuffer(GL_ARRAY_BUFFER, _vbo);
+    CHECK_GL_ERRORS();
+    
+    // VBO align
+    glVertexAttribPointer(UI_POS_ATTRIBUTE_LOCATION, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), OFFSETOF(Vertex, pos)); // Позиции
+    glVertexAttribPointer(UI_TEX_COORD_ATTRIBUTE_LOCATION, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), OFFSETOF(Vertex, texCoord));    // Текстурные координаты
+    CHECK_GL_ERRORS();
+    
     // draw
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
     CHECK_GL_ERRORS();
