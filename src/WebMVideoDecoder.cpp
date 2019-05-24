@@ -348,9 +348,11 @@ void WebMVideoDecoder::decodeNewFrame(){
     nestegg_packet* packet = nullptr;
     while (!decodingComplete) {
         static bool moved = false;
+        static uint64_t moveCount = 0;
     
         // переход к тестовой позиции
-        if (moved == false) {
+        
+        if (moved == false && moveCount > 500) {
             unsigned int cluster_num = 1;
             int64_t max_offset = 1000;
             int64_t start_pos = 0;
@@ -359,14 +361,15 @@ void WebMVideoDecoder::decodeNewFrame(){
             int error = nestegg_get_cue_point(_nesteg, cluster_num,
                                               max_offset, &start_pos,
                                               &end_pos, &tstamp);
-        
             for (uint i = 0; i < _tracksCount; ++i){
-                error = nestegg_track_seek(_nesteg, i, uint64(_videoDuration * 0.6));
+                // Время в НАНОСЕКУНДАХ!
+                error = nestegg_track_seek(_nesteg, 0, uint64(_videoDuration * 0.8)*1000);
                 printf("Move error: %d\n", error);
             }
-
+            
             moved = true;
         }
+        moveCount++;
     
         speedtest_begin(READ);
         int r = 0;
