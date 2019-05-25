@@ -74,6 +74,7 @@ private:
     size_t _decodedBufferSize;
     float _deltaSumm;
     bool _isLastFrameDecoded;
+    size_t _fileSize;
     
 private:
     void setStatus(WebMDecodeStatus newStatus);

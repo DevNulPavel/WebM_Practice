@@ -57,6 +57,7 @@ int decoderSeek(int64_t n, int whence, void* context) {
     if (!f->good()){
         return -1;
     }
+    f->sync();
     return 0;
 }
 
@@ -86,7 +87,8 @@ WebMVideoDecoder::WebMVideoDecoder(const std::string& filePath):
     _bufferStride(0),
     _decodedBufferSize(0),
     _deltaSumm(0.0f),
-    _isLastFrameDecoded(false){
+    _isLastFrameDecoded(false),
+    _fileSize(0){
     
     // загрузка и инициализация
     int bufferInitStatus = loadDataStream();
@@ -168,9 +170,11 @@ int WebMVideoDecoder::loadDataStream(){
     // get length of file:
     _stream->seekg (0, _stream->end);
     size_t length = _stream->tellg();
-    _stream->seekg (0, _stream->beg);
+    _stream->seekg(0, _stream->beg);
     printf("Video file length = %d\n", length);
-
+    
+    _fileSize = length;
+    
     return (opened == true) ? 0 : -1;
 }
 
@@ -333,6 +337,43 @@ void WebMVideoDecoder::decodeNewFrame(){
         return;
     }
     
+    // переход к тестовой позиции
+    static bool moved = false;
+    static uint64_t moveCount = 0;
+    if (moved == false && moveCount > 150) {
+        int error = 0;
+        /*unsigned int cluster_num = 1;
+        int64_t max_offset = 1000;
+        int64_t start_pos = 0;
+        int64_t end_pos = 0;
+        uint64_t tstamp = 0;
+        error = nestegg_get_cue_point(_nesteg, cluster_num,
+                                          max_offset, &start_pos,
+                                          &end_pos, &tstamp);*/
+        
+        // В видео с зайцами мало ключевых кадров, а точнее один - начало, поэтому перекидывает на начало
+        //for (uint i = 0; i < _tracksCount; ++i){
+        for (uint i = 0; i < 1; ++i){
+            // Время в НАНОСЕКУНДАХ!
+            error = nestegg_track_seek(_nesteg, 0, uint64_t(_videoDuration * 0.9));
+            // Смещение в байтах
+            //error = nestegg_offset_seek(_nesteg, static_cast<size_t>(_fileSize * 0.5));
+            //nestegg_read_reset(_nesteg);
+            printf("Move error: %d\n", error);
+        }
+        
+        // Смещаемся напрямую по данным потока
+        //_stream->clear();
+        //_stream->seekg(static_cast<size_t>(_fileSize * 0.5), fstream::beg);
+        //_stream->sync();
+        //nestegg_read_reset(_nesteg);
+        //printf("File stream moved\n");
+        
+        moved = true;
+        return;
+    }
+    moveCount++;
+    
     // статус - декодируем
     setStatus(WebMDecodeStatus::DECODING);
 
@@ -347,30 +388,6 @@ void WebMVideoDecoder::decodeNewFrame(){
 
     nestegg_packet* packet = nullptr;
     while (!decodingComplete) {
-        static bool moved = false;
-        static uint64_t moveCount = 0;
-    
-        // переход к тестовой позиции
-        
-        if (moved == false && moveCount > 500) {
-            unsigned int cluster_num = 1;
-            int64_t max_offset = 1000;
-            int64_t start_pos = 0;
-            int64_t end_pos = 0;
-            uint64_t tstamp = 0;
-            int error = nestegg_get_cue_point(_nesteg, cluster_num,
-                                              max_offset, &start_pos,
-                                              &end_pos, &tstamp);
-            for (uint i = 0; i < _tracksCount; ++i){
-                // Время в НАНОСЕКУНДАХ!
-                error = nestegg_track_seek(_nesteg, 0, uint64(_videoDuration * 0.8)*1000);
-                printf("Move error: %d\n", error);
-            }
-            
-            moved = true;
-        }
-        moveCount++;
-    
         speedtest_begin(READ);
         int r = 0;
         // читаем пакет пока не прочитается
@@ -388,7 +405,7 @@ void WebMVideoDecoder::decodeNewFrame(){
             if(packet){
                 nestegg_free_packet(packet);
             }
-        
+            
             // переход к началу
             for (uint i = 0; i < _tracksCount; ++i){
                 nestegg_track_seek(_nesteg, i, 0);
