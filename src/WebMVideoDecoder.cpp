@@ -351,6 +351,13 @@ void WebMVideoDecoder::decodeNewFrame(){
                                           max_offset, &start_pos,
                                           &end_pos, &tstamp);*/
         
+        int hasCues = nestegg_has_cues(_nesteg);
+        if(hasCues == 0){
+            printf("Has NO cues\n");
+        }else{
+            printf("Has cues\n");
+        }
+        
         // В видео с зайцами мало ключевых кадров, а точнее один - начало, поэтому перекидывает на начало
         //for (uint i = 0; i < _tracksCount; ++i){
         for (uint i = 0; i < 1; ++i){
